@@ -1,0 +1,13 @@
+MetaData Begin
+	Name	= STRM_Final_Trim_30m.ers
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build d6f2b624fe14+ "
+	STRM_Final_Trim_30m Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= STRM_Final_Trim_30m
+		Bands	= 1
+		Units	= "none"
+	STRM_Final_Trim_30m End
+MetaData End

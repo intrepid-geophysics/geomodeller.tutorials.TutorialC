@@ -1,0 +1,93 @@
+MetaData Begin
+	Name	= initial.igmesh
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build d6f2b624fe14+ "
+	voxet_Lithology Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Lithology
+		Units	= "Lithology"
+	voxet_Lithology End
+	voxet_Density Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Density
+		Units	= "none"
+	voxet_Density End
+	voxet_Susceptibility Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Susceptibility
+		Units	= "none"
+	voxet_Susceptibility End
+	MeshGrid Begin
+		Type	= regular-grid
+		Dimensions	= 3
+		Purpose	= MODEL
+		Description	= no description
+		Suffix	= .vo
+		Format	= iovoxet
+		Name	= initial
+		GridExtents = {
+			            100
+			            100
+			             90
+}
+		Origin = {
+			      50.000000
+			      50.000000
+			   -1975.000000
+}
+		Spacing = {
+			     100.000000
+			     100.000000
+			      50.000000
+}
+		BasisX = {
+			       1.000000
+			              0
+			              0
+}
+		BasisY = {
+			              0
+			       1.000000
+			              0
+}
+		BasisZ = {
+			              0
+			              0
+			       1.000000
+}
+		FieldData Begin
+			Lithology Begin
+				Resource	= initial.igmesh/initial.vo
+				Name	= Lithology
+				Primitive	= voxet
+				DataType	= IEEE8ByteReal
+				Units	= Lithology
+				Alias	= Lithology
+				NumElem	= 900000
+			Lithology End
+			Density Begin
+				Resource	= initial.igmesh/initial.vo
+				Name	= Density
+				Primitive	= voxet
+				DataType	= IEEE8ByteReal
+				Units	= none
+				Alias	= Density
+				NumElem	= 900000
+			Density End
+			Susceptibility Begin
+				Resource	= initial.igmesh/initial.vo
+				Name	= Susceptibility
+				Primitive	= voxet
+				DataType	= IEEE8ByteReal
+				Units	= none
+				Alias	= Susceptibility
+				NumElem	= 900000
+			Susceptibility End
+		FieldData End
+	MeshGrid End
+MetaData End

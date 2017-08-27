@@ -1,0 +1,45 @@
+<com.geomodeller.ui.dialogs.LutConfigurator id="1">
+  <data id="2">
+    <data id="3">
+      <lut>D:\NewTutorial_2014\Tutorial_C\Tutorial_C4\C4Completed_Project\luts\PVR_Vol1p0_Stats_1_400K_T90##MostProbableThresholded.lutconfig\PVR_Vol1p0_Stats_1_400K_T90##MostProbableThresholded</lut>
+      <file>D:\NewTutorial_2014\Tutorial_C\Tutorial_C4\C4Completed_Project\luts\PVR_Vol1p0_Stats_1_400K_T90##MostProbableThresholded.lutconfig\PVR_Vol1p0_Stats_1_400K_T90##MostProbableThresholded</file>
+      <builder class="com.geomodeller.ui.dialogs.ModelPileBuilder" id="4">
+        <points id="5">
+          <com.dfa.apps.gravitas.plugin.visual3d.lut.VC id="6">
+            <v>1.0</v>
+            <cix>0</cix>
+            <user>true</user>
+            <current>false</current>
+          </com.dfa.apps.gravitas.plugin.visual3d.lut.VC>
+          <com.dfa.apps.gravitas.plugin.visual3d.lut.VC id="7">
+            <v>2.0</v>
+            <cix>1</cix>
+            <user>true</user>
+            <current>false</current>
+          </com.dfa.apps.gravitas.plugin.visual3d.lut.VC>
+          <com.dfa.apps.gravitas.plugin.visual3d.lut.VC id="8">
+            <v>3.0</v>
+            <cix>2</cix>
+            <user>true</user>
+            <current>false</current>
+          </com.dfa.apps.gravitas.plugin.visual3d.lut.VC>
+        </points>
+        <selected>0</selected>
+        <myname>PVR_Vol1p0_Stats_1_400K_T90##MostProbableThresholded</myname>
+      </builder>
+      <available class="linked-hash-set" id="9">
+        <com.geomodeller.ui.dialogs.ModelPileBuilder reference="4"/>
+      </available>
+      <dataclip id="10">
+        <min>1.0</min>
+        <max>3.0</max>
+        <undefined>false</undefined>
+      </dataclip>
+      <visualclip id="11">
+        <min>1.0</min>
+        <max>3.0</max>
+        <undefined>false</undefined>
+      </visualclip>
+    </data>
+  </data>
+</com.geomodeller.ui.dialogs.LutConfigurator>

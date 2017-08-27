@@ -1,0 +1,34 @@
+MetaData Begin
+	Name	= final.vo
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build d6f2b624fe14+ "
+	Lithology Begin
+		DataType	= IEEE4ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Lithology
+		Units	= "Lithology"
+	Lithology End
+	FixedCell Begin
+		DataType	= Signed16BitInteger
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= FixedCell
+		Units	= "FixedCell"
+	FixedCell End
+	Density Begin
+		DataType	= IEEE4ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Density
+		Units	= "none"
+	Density End
+	Extensions Begin
+		LithologyMapping Begin
+			Map = {
+				"1" "NewGranite" "255a000r138g000b"
+				"2" "Host_rock" "255a151r255g255b"
+				"3" "Cover" "255a255r249g205b"
+}
+		LithologyMapping End
+	Extensions End
+MetaData End

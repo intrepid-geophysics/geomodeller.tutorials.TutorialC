@@ -1,0 +1,15 @@
+MetaData Begin
+	Name	= SRTM_Final_Trim_30m.ers
+	Version	= "Intrepid GeoModeller v6.0.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build 2fd0a434b918+ "
+	SRTM_Final_Trim_30m Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= SRTM_Final_Trim_30m
+		Bands	= 1
+		Projection	= "Local"
+		Datum	= "WGS84"
+		Units	= "none"
+	SRTM_Final_Trim_30m End
+MetaData End

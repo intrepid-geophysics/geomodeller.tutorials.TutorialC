@@ -1,0 +1,61 @@
+MetaData Begin
+	Name	= DTM.igmesh
+	Version	= "Intrepid invbatch v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build 0ded2729519c+ "
+	quad_STRM_Final_Trim_30m Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= STRM_Final_Trim_30m
+		Units	= "none"
+	quad_STRM_Final_Trim_30m End
+	MeshGrid Begin
+		Type	= regular-grid
+		Dimensions	= 2
+		Purpose	= MODEL
+		Description	= no description
+		Suffix	= .ers
+		Format	= iogrid
+		Name	= DTM
+		GridExtents = {
+			            334
+			            334
+			              1
+}
+		Origin = {
+			      15.000000
+			      -5.000000
+			              0
+}
+		Spacing = {
+			      30.000000
+			      30.000000
+			              0
+}
+		BasisX = {
+			       1.000000
+			              0
+			              0
+}
+		BasisY = {
+			              0
+			       1.000000
+			              0
+}
+		BasisZ = {
+			              0
+			              0
+			       1.000000
+}
+		FieldData Begin
+			STRM_Final_Trim_30m Begin
+				Resource	= DTM.igmesh/STRM_Final_Trim_30m.ers
+				Name	= STRM_Final_Trim_30m
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= none
+				Alias	= STRM_Final_Trim_30m
+				NumElem	= 111556
+			STRM_Final_Trim_30m End
+		FieldData End
+	MeshGrid End
+MetaData End

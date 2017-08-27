@@ -1,0 +1,92 @@
+MetaData Begin
+	Name	= Case1_Fwd_Gz_Run1_3D_initial.igmesh
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build 18bece4bdfdf+ "
+	voxet_Lithology Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Lithology
+		Units	= "Lithology"
+	voxet_Lithology End
+	voxet_Density Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Density
+		Units	= "none"
+	voxet_Density End
+	Extensions Begin
+		LithologyMapping Begin
+			Map = {
+				"3" "Cover" "255a255r249g205b"
+				"2" "Host_rock" "255a151r255g255b"
+				"1" "Granite" "255a237r017g137b"
+}
+		LithologyMapping End
+	Extensions End
+	MeshGrid Begin
+		Type	= semiregular-grid
+		Dimensions	= 3
+		Purpose	= MODEL
+		Description	= no description
+		Suffix	= ..DIR
+		Format	= iotable
+		Name	= Case1_Fwd_Gz_Run1_3D_initial
+		Projection	= "Local"
+		Datum	= "WGS84"
+		GridExtents = {
+			             20
+			             20
+			             23
+}
+		Origin = {
+			            0.5
+			            0.5
+			   -1999.500000
+}
+		Spacing = {
+			              0
+			              0
+			              0
+}
+		BasisX = {
+			     500.000000
+			              0
+			              0
+}
+		BasisY = {
+			              0
+			     500.000000
+			              0
+}
+		BasisZ = {
+			              0
+			              0
+			     438.837036
+}
+		DXDYDZ Begin
+			Resource	= Case1_Fwd_Gz_Run1_3D_initial.igmesh/dxdydz..DIR
+			NumElem	= 23
+		DXDYDZ End
+		FieldData Begin
+			Lithology Begin
+				Resource	= Case1_Fwd_Gz_Run1_3D_initial.igmesh/voxet..DIR
+				Name	= Lithology
+				Primitive	= voxet
+				DataType	= IEEE8ByteReal
+				Units	= Lithology
+				Alias	= Lithology
+				NumElem	= 9200
+			Lithology End
+			Density Begin
+				Resource	= Case1_Fwd_Gz_Run1_3D_initial.igmesh/voxet..DIR
+				Name	= Density
+				Primitive	= voxet
+				DataType	= IEEE8ByteReal
+				Units	= none
+				Alias	= Density
+				NumElem	= 9200
+			Density End
+		FieldData End
+	MeshGrid End
+MetaData End

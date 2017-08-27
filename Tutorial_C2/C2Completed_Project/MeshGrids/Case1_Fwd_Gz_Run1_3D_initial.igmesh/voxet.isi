@@ -1,0 +1,16 @@
+MetaData Begin
+	Name	= voxet..DIR
+	Version	= "Intrepid GeoModeller v6.0.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build bc37091a4661+ "
+	Density Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Bands	= 1
+	Density End
+	Lithology Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Bands	= 1
+	Lithology End
+MetaData End

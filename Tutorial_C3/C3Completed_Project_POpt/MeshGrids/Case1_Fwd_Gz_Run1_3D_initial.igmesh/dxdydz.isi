@@ -1,0 +1,40 @@
+MetaData Begin
+	Name	= dxdydz..DIR
+	Version	= "Intrepid GeoModeller v6.0.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build bc37091a4661+ "
+	_DX_ Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Bands	= 1
+	_DX_ End
+	_DY_ Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Bands	= 1
+	_DY_ End
+	_DZ_ Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Bands	= 1
+	_DZ_ End
+	_SX_ Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Bands	= 1
+	_SX_ End
+	_SY_ Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Bands	= 1
+	_SY_ End
+	_SZ_ Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Bands	= 1
+	_SZ_ End
+MetaData End

@@ -1,0 +1,13 @@
+MetaData Begin
+	Name	= Observed_Mag.ers
+	Version	= "Intrepid GeoModeller v6.0.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build a3100131cfe9+ "
+	Observed_Mag Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= Observed_Mag
+		Bands	= 1
+		Units	= "RAW"
+	Observed_Mag End
+MetaData End

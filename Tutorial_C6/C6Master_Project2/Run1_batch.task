@@ -1,0 +1,9 @@
+InversionTask {
+Run {
+  filename: "D:/NewTutorial_2014/Tutorial_C/Tutorial_C6/C6Master_Project2/C6Master_Project2.xml"
+  case: "Case1_Grav_FreeAir"
+  run: "Run1"
+  Number_CPUs: 4
+  SaveForwardResponsePerLithology: false
+}
+}

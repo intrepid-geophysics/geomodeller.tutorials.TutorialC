@@ -1,0 +1,12 @@
+MetaData Begin
+	Name	= Observed_Boug_Grav_2p2.ers
+	Version	= "Intrepid Project Manager Tool v5.6.0 INTBTA-3098 for Windows (x64) by PELAGIAN optimised build 288c6d276dd3+ "
+	Observed_Boug_Grav_2p2 Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Bands	= 1
+		Projection	= "Local"
+		Datum	= "WGS84"
+	Observed_Boug_Grav_2p2 End
+MetaData End

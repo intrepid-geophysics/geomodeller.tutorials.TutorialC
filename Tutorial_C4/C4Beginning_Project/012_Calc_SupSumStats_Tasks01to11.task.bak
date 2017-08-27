@@ -1,0 +1,154 @@
+InversionTask {
+	MakeSuperSummaryStats {
+		filename: "C4Completed_Project.xml";
+		case: "Case1_NoTests";
+		statistical_voxet: "NoTests_Stats_1_400K_T90";
+		RunInterval {
+			run: "Run1";
+			start_iterations: 0;
+			end_iterations: 400000;
+		}
+		threshold_percentage: 90;
+	}
+}
+
+InversionTask {
+	MakeSuperSummaryStats {
+		filename: "C4Completed_Project.xml";
+		case: "Case1_PVR";
+		statistical_voxet: "PVR_Stats_1_400K_T90";
+		RunInterval {
+			run: "Run1";
+			start_iterations: 0;
+			end_iterations: 400000;
+		}
+		threshold_percentage: 90;
+	}
+}
+
+InversionTask {
+	MakeSuperSummaryStats {
+		filename: "C4Completed_Project.xml";
+		case: "Case1_PVR_Comm1";
+		statistical_voxet: "PVR_Comm1_Stats_1_400K_T90";
+		RunInterval {
+			run: "Run1";
+			start_iterations: 0;
+			end_iterations: 400000;
+		}
+		threshold_percentage: 90;
+	}
+}
+
+InversionTask {
+	MakeSuperSummaryStats {
+		filename: "C4Completed_Project.xml";
+		case: "Case1_PVR_Comm2";
+		statistical_voxet: "PVR_Comm2_Stats_1_400K_T90";
+		RunInterval {
+			run: "Run1";
+			start_iterations: 0;
+			end_iterations: 400000;
+		}
+		threshold_percentage: 90;
+	}
+}
+
+InversionTask {
+	MakeSuperSummaryStats {
+		filename: "C4Completed_Project.xml";
+		case: "Case1_PVR_Comm3";
+		statistical_voxet: "PVR_Comm3_Stats_1_400K_T90";
+		RunInterval {
+			run: "Run1";
+			start_iterations: 0;
+			end_iterations: 400000;
+		}
+		threshold_percentage: 90;
+	}
+}
+
+InversionTask {
+	MakeSuperSummaryStats {
+		filename: "C4Completed_Project.xml";
+		case: "Case1_PVR_Shape1";
+		statistical_voxet: "PVR_Shape1_Stats_1_400K_T90";
+		RunInterval {
+			run: "Run1";
+			start_iterations: 0;
+			end_iterations: 400000;
+		}
+		threshold_percentage: 90;
+	}
+}
+
+InversionTask {
+	MakeSuperSummaryStats {
+		filename: "C4Completed_Project.xml";
+		case: "Case1_PVR_Shape2";
+		statistical_voxet: "PVR_Shape2_Stats_1_400K_T90";
+		RunInterval {
+			run: "Run1";
+			start_iterations: 0;
+			end_iterations: 400000;
+		}
+		threshold_percentage: 90;
+	}
+}
+
+InversionTask {
+	MakeSuperSummaryStats {
+		filename: "C4Completed_Project.xml";
+		case: "Case1_PVR_Shape3";
+		statistical_voxet: "PVR_Shape3_Stats_1_400K_T90";
+		RunInterval {
+			run: "Run1";
+			start_iterations: 0;
+			end_iterations: 400000;
+		}
+		threshold_percentage: 90;
+	}
+}
+
+InversionTask {
+	MakeSuperSummaryStats {
+		filename: "C4Completed_Project.xml";
+		case: "Case1_PVR_Vol0p7";
+		statistical_voxet: "PVR_Vol0p7_Stats_1_400K_T90";
+		RunInterval {
+			run: "Run1";
+			start_iterations: 0;
+			end_iterations: 400000;
+		}
+		threshold_percentage: 90;
+	}
+}
+
+InversionTask {
+	MakeSuperSummaryStats {
+		filename: "C4Completed_Project.xml";
+		case: "Case1_PVR_Vol1p0";
+		statistical_voxet: "PVR_Vol1p0_Stats_1_400K_T90";
+		RunInterval {
+			run: "Run1";
+			start_iterations: 0;
+			end_iterations: 400000;
+		}
+		threshold_percentage: 90;
+	}
+}
+
+InversionTask {
+	MakeSuperSummaryStats {
+		filename: "C4Completed_Project.xml";
+		case: "Case1_PVR_Vol1p3";
+		statistical_voxet: "PVR_Vol1p3_Stats_1_400K_T90";
+		RunInterval {
+			run: "Run1";
+			start_iterations: 0;
+			end_iterations: 400000;
+		}
+		threshold_percentage: 90;
+	}
+}
+

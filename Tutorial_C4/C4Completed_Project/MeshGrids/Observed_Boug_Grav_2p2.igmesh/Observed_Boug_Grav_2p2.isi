@@ -1,0 +1,13 @@
+MetaData Begin
+	Name	= Observed_Boug_Grav_2p2.ers
+	Version	= "Intrepid GeoModeller v6.0.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build a3100131cfe9+ "
+	Observed_Boug_Grav_2p2 Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= Observed_Boug_Grav_2p2
+		Bands	= 1
+		Units	= "RAW"
+	Observed_Boug_Grav_2p2 End
+MetaData End

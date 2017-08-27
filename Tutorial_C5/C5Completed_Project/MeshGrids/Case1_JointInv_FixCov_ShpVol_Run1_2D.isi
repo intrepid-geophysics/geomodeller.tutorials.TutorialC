@@ -1,0 +1,173 @@
+MetaData Begin
+	Name	= Case1_JointInv_FixCov_ShpVol_Run1_2D.igmesh
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build d6f2b624fe14+ "
+	quad_compute_Surface_1 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= compute_Surface_1
+		Units	= "RAW"
+	quad_compute_Surface_1 End
+	quad_compute_Surface_2 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= compute_Surface_2
+		Units	= "RAW"
+	quad_compute_Surface_2 End
+	quad_final_Gravimetry_1 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= final_Gravimetry_1
+		Units	= "RAW"
+	quad_final_Gravimetry_1 End
+	quad_final_TMI_2 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= final_TMI_2
+		Units	= "RAW"
+	quad_final_TMI_2 End
+	quad_initial_Gravimetry_1 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= initial_Gravimetry_1
+		Units	= "RAW"
+	quad_initial_Gravimetry_1 End
+	quad_initial_TMI_2 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= initial_TMI_2
+		Units	= "RAW"
+	quad_initial_TMI_2 End
+	quad_observed_Gravimetry_1 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= observed_Gravimetry_1
+		Units	= "RAW"
+	quad_observed_Gravimetry_1 End
+	quad_observed_TMI_2 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= observed_TMI_2
+		Units	= "RAW"
+	quad_observed_TMI_2 End
+	MeshGrid Begin
+		Type	= regular-grid
+		Dimensions	= 2
+		Purpose	= MODEL
+		Description	= no description
+		Suffix	= .ers
+		Format	= iogrid
+		Name	= Case1_JointInv_FixCov_ShpVol_Run1_2D
+		GridExtents = {
+			             20
+			             20
+			              1
+}
+		Origin = {
+			     250.000000
+			     250.000000
+			              0
+}
+		Spacing = {
+			     500.000000
+			     500.000000
+			              0
+}
+		BasisX = {
+			       1.000000
+			              0
+			              0
+}
+		BasisY = {
+			              0
+			       1.000000
+			              0
+}
+		BasisZ = {
+			              0
+			              0
+			       1.000000
+}
+		FieldData Begin
+			compute_Surface_1 Begin
+				Resource	= Case1_JointInv_FixCov_ShpVol_Run1_2D.igmesh/compute_Surface_1.ers
+				Name	= compute_Surface_1
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= compute_Surface_1
+				NumElem	= 400
+			compute_Surface_1 End
+			compute_Surface_2 Begin
+				Resource	= Case1_JointInv_FixCov_ShpVol_Run1_2D.igmesh/compute_Surface_2.ers
+				Name	= compute_Surface_2
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= compute_Surface_2
+				NumElem	= 400
+			compute_Surface_2 End
+			final_Gravimetry_1 Begin
+				Resource	= Case1_JointInv_FixCov_ShpVol_Run1_2D.igmesh/final_Gravimetry_1.ers
+				Name	= final_Gravimetry_1
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= final_Gravimetry_1
+				NumElem	= 400
+			final_Gravimetry_1 End
+			final_TMI_2 Begin
+				Resource	= Case1_JointInv_FixCov_ShpVol_Run1_2D.igmesh/final_TMI_2.ers
+				Name	= final_TMI_2
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= final_TMI_2
+				NumElem	= 400
+			final_TMI_2 End
+			initial_Gravimetry_1 Begin
+				Resource	= Case1_JointInv_FixCov_ShpVol_Run1_2D.igmesh/initial_Gravimetry_1.ers
+				Name	= initial_Gravimetry_1
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= initial_Gravimetry_1
+				NumElem	= 400
+			initial_Gravimetry_1 End
+			initial_TMI_2 Begin
+				Resource	= Case1_JointInv_FixCov_ShpVol_Run1_2D.igmesh/initial_TMI_2.ers
+				Name	= initial_TMI_2
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= initial_TMI_2
+				NumElem	= 400
+			initial_TMI_2 End
+			observed_Gravimetry_1 Begin
+				Resource	= Case1_JointInv_FixCov_ShpVol_Run1_2D.igmesh/observed_Gravimetry_1.ers
+				Name	= observed_Gravimetry_1
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= observed_Gravimetry_1
+				NumElem	= 400
+			observed_Gravimetry_1 End
+			observed_TMI_2 Begin
+				Resource	= Case1_JointInv_FixCov_ShpVol_Run1_2D.igmesh/observed_TMI_2.ers
+				Name	= observed_TMI_2
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= observed_TMI_2
+				NumElem	= 400
+			observed_TMI_2 End
+		FieldData End
+	MeshGrid End
+MetaData End

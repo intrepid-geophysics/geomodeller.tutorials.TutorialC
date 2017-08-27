@@ -1,0 +1,191 @@
+MetaData Begin
+	Name	= Case1_FM_FFT_Boug_80m_Run1_2D.igmesh
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build d6f2b624fe14+ "
+	quad_calculated_GravityTensors_1 Begin
+		DataType	= Tensor
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= calculated_GravityTensors_1
+		CoordinateSystemType	= "END"
+		Units	= "RAW"
+	quad_calculated_GravityTensors_1 End
+	quad_compute_Surface_1 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= compute_Surface_1
+		Units	= "RAW"
+	quad_compute_Surface_1 End
+	quad_observed_Gdd_1 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= observed_Gdd_1
+		Units	= "RAW"
+	quad_observed_Gdd_1 End
+	quad_observed_Ged_1 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= observed_Ged_1
+		Units	= "RAW"
+	quad_observed_Ged_1 End
+	quad_observed_Gee_1 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= observed_Gee_1
+		Units	= "RAW"
+	quad_observed_Gee_1 End
+	quad_observed_Gen_1 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= observed_Gen_1
+		Units	= "RAW"
+	quad_observed_Gen_1 End
+	quad_observed_Gnd_1 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= observed_Gnd_1
+		Units	= "RAW"
+	quad_observed_Gnd_1 End
+	quad_observed_Gnn_1 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= observed_Gnn_1
+		Units	= "RAW"
+	quad_observed_Gnn_1 End
+	quad_observed_GravityTensors_1 Begin
+		DataType	= Tensor
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= observed_GravityTensors_1
+		CoordinateSystemType	= "END"
+		Units	= "RAW"
+	quad_observed_GravityTensors_1 End
+	MeshGrid Begin
+		Type	= regular-grid
+		Dimensions	= 2
+		Purpose	= MODEL
+		Description	= no description
+		Suffix	= .ers
+		Format	= iogrid
+		Name	= Case1_FM_FFT_Boug_80m_Run1_2D
+		GridExtents = {
+			             20
+			             20
+			              1
+}
+		Origin = {
+			     250.000000
+			     250.000000
+			              0
+}
+		Spacing = {
+			     500.000000
+			     500.000000
+			              0
+}
+		BasisX = {
+			       1.000000
+			              0
+			              0
+}
+		BasisY = {
+			              0
+			       1.000000
+			              0
+}
+		BasisZ = {
+			              0
+			              0
+			       1.000000
+}
+		FieldData Begin
+			calculated_GravityTensors_1 Begin
+				Resource	= Case1_FM_FFT_Boug_80m_Run1_2D.igmesh/calculated_GravityTensors_1.ers
+				Name	= calculated_GravityTensors_1
+				Primitive	= quad
+				DataType	= Tensor
+				Units	= RAW
+				Alias	= calculated_GravityTensors_1
+				NumElem	= 400
+			calculated_GravityTensors_1 End
+			compute_Surface_1 Begin
+				Resource	= Case1_FM_FFT_Boug_80m_Run1_2D.igmesh/compute_Surface_1.ers
+				Name	= compute_Surface_1
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= compute_Surface_1
+				NumElem	= 400
+			compute_Surface_1 End
+			observed_Gdd_1 Begin
+				Resource	= Case1_FM_FFT_Boug_80m_Run1_2D.igmesh/observed_Gdd_1.ers
+				Name	= observed_Gdd_1
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= observed_Gdd_1
+				NumElem	= 400
+			observed_Gdd_1 End
+			observed_Ged_1 Begin
+				Resource	= Case1_FM_FFT_Boug_80m_Run1_2D.igmesh/observed_Ged_1.ers
+				Name	= observed_Ged_1
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= observed_Ged_1
+				NumElem	= 400
+			observed_Ged_1 End
+			observed_Gee_1 Begin
+				Resource	= Case1_FM_FFT_Boug_80m_Run1_2D.igmesh/observed_Gee_1.ers
+				Name	= observed_Gee_1
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= observed_Gee_1
+				NumElem	= 400
+			observed_Gee_1 End
+			observed_Gen_1 Begin
+				Resource	= Case1_FM_FFT_Boug_80m_Run1_2D.igmesh/observed_Gen_1.ers
+				Name	= observed_Gen_1
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= observed_Gen_1
+				NumElem	= 400
+			observed_Gen_1 End
+			observed_Gnd_1 Begin
+				Resource	= Case1_FM_FFT_Boug_80m_Run1_2D.igmesh/observed_Gnd_1.ers
+				Name	= observed_Gnd_1
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= observed_Gnd_1
+				NumElem	= 400
+			observed_Gnd_1 End
+			observed_Gnn_1 Begin
+				Resource	= Case1_FM_FFT_Boug_80m_Run1_2D.igmesh/observed_Gnn_1.ers
+				Name	= observed_Gnn_1
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= observed_Gnn_1
+				NumElem	= 400
+			observed_Gnn_1 End
+			observed_GravityTensors_1 Begin
+				Resource	= Case1_FM_FFT_Boug_80m_Run1_2D.igmesh/observed_GravityTensors_1.ers
+				Name	= observed_GravityTensors_1
+				Primitive	= quad
+				DataType	= Tensor
+				Units	= RAW
+				Alias	= observed_GravityTensors_1
+				NumElem	= 400
+			observed_GravityTensors_1 End
+		FieldData End
+	MeshGrid End
+MetaData End

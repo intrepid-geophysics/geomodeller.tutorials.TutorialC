@@ -1,0 +1,63 @@
+MetaData Begin
+	Name	= calculated_Gravimetry_1.igmesh
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build 0ded2729519c+ "
+	quad_calculated_Gravimetry_1 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= calculated_Gravimetry_1
+		Units	= "RAW"
+	quad_calculated_Gravimetry_1 End
+	MeshGrid Begin
+		Type	= regular-grid
+		Dimensions	= 2
+		Purpose	= MODEL
+		Description	= no description
+		Suffix	= .ers
+		Format	= iogrid
+		Name	= calculated_Gravimetry_1
+		Projection	= "Local"
+		Datum	= "WGS84"
+		GridExtents = {
+			             20
+			             20
+			              1
+}
+		Origin = {
+			     250.000000
+			     250.000000
+			              0
+}
+		Spacing = {
+			     500.000000
+			     500.000000
+			              0
+}
+		BasisX = {
+			       1.000000
+			              0
+			              0
+}
+		BasisY = {
+			              0
+			       1.000000
+			              0
+}
+		BasisZ = {
+			              0
+			              0
+			       1.000000
+}
+		FieldData Begin
+			calculated_Gravimetry_1 Begin
+				Resource	= calculated_Gravimetry_1.igmesh/calculated_Gravimetry_1.ers
+				Name	= calculated_Gravimetry_1
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= calculated_Gravimetry_1
+				NumElem	= 400
+			calculated_Gravimetry_1 End
+		FieldData End
+	MeshGrid End
+MetaData End

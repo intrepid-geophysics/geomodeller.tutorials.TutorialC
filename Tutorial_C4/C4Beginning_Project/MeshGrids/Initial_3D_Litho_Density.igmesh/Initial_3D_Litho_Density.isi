@@ -1,0 +1,27 @@
+MetaData Begin
+	Name	= Initial_3D_Litho_Density.vo
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build 18bece4bdfdf+ "
+	Lithology Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Lithology
+		Units	= "Lithology"
+	Lithology End
+	Density Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Density
+		Units	= "none"
+	Density End
+	Extensions Begin
+		LithologyMapping Begin
+			Map = {
+				"3" "Cover" "255a255r249g205b"
+				"2" "Host_rock" "255a151r255g255b"
+				"1" "Granite" "255a237r017g137b"
+}
+		LithologyMapping End
+	Extensions End
+MetaData End

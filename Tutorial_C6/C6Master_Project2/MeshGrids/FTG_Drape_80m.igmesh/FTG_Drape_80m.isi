@@ -1,0 +1,12 @@
+MetaData Begin
+	Name	= FTG_Drape_80m.ers
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build d6f2b624fe14+ "
+	FTG_Drape_80m Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= FTG_Drape_80m
+		Bands	= 1
+	FTG_Drape_80m End
+MetaData End

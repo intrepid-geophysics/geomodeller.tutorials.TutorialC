@@ -1,0 +1,10 @@
+MetaData Begin
+	Name	= calculated_bylitho_TMI_D_3.ers
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build 0ded2729519c+ "
+	calculated_bylitho_TMI_D_3 Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Bands	= 1
+	calculated_bylitho_TMI_D_3 End
+MetaData End

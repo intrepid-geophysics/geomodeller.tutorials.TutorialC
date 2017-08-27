@@ -1,0 +1,77 @@
+MetaData Begin
+	Name	= Case1_FM_FFT_Boug_80m_Run1_3D_initial.igmesh
+	Version	= "Intrepid invbatch v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build d6f2b624fe14+ "
+	voxet_Lithology Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Lithology
+		Units	= "Lithology"
+	voxet_Lithology End
+	voxet_Density Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Density
+		Units	= "none"
+	voxet_Density End
+	MeshGrid Begin
+		Type	= regular-grid
+		Dimensions	= 3
+		Purpose	= MODEL
+		Description	= no description
+		Suffix	= .vo
+		Format	= iovoxet
+		Name	= Case1_FM_FFT_Boug_80m_Run1_3D_initial
+		GridExtents = {
+			             20
+			             20
+			             20
+}
+		Origin = {
+			     250.000000
+			     250.000000
+			   -1887.500000
+}
+		Spacing = {
+			     500.000000
+			     500.000000
+			     225.000000
+}
+		BasisX = {
+			       1.000000
+			              0
+			              0
+}
+		BasisY = {
+			              0
+			       1.000000
+			              0
+}
+		BasisZ = {
+			              0
+			              0
+			       1.000000
+}
+		FieldData Begin
+			Lithology Begin
+				Resource	= Case1_FM_FFT_Boug_80m_Run1_3D_initial.igmesh/Case1_FM_FFT_Boug_80m_Run1_3D_initial.vo
+				Name	= Lithology
+				Primitive	= voxet
+				DataType	= IEEE8ByteReal
+				Units	= Lithology
+				Alias	= Lithology
+				NumElem	= 8000
+			Lithology End
+			Density Begin
+				Resource	= Case1_FM_FFT_Boug_80m_Run1_3D_initial.igmesh/Case1_FM_FFT_Boug_80m_Run1_3D_initial.vo
+				Name	= Density
+				Primitive	= voxet
+				DataType	= IEEE8ByteReal
+				Units	= none
+				Alias	= Density
+				NumElem	= 8000
+			Density End
+		FieldData End
+	MeshGrid End
+MetaData End

@@ -1,0 +1,15 @@
+Local Begin
+	Name	= compute_Surface_1.ers
+	Version	= "Intrepid GeoModeller v6.0.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build bc37091a4661+ "
+	compute_Surface_1 Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= compute_Surface_1
+		Bands	= 1
+		Projection	= "Local"
+		Datum	= "WGS84"
+		Units	= "RAW"
+	compute_Surface_1 End
+Local End

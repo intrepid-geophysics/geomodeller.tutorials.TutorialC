@@ -1,0 +1,61 @@
+MetaData Begin
+	Name	= Observed_Mag.igmesh
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build d6f2b624fe14+ "
+	quad_Observed_Mag Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= Observed_Mag
+		Units	= "RAW"
+	quad_Observed_Mag End
+	MeshGrid Begin
+		Type	= regular-grid
+		Dimensions	= 2
+		Purpose	= MODEL
+		Description	= no description
+		Suffix	= .ers
+		Format	= iogrid
+		Name	= Observed_Mag
+		GridExtents = {
+			            100
+			            100
+			              1
+}
+		Origin = {
+			      50.000000
+			      50.000000
+			              0
+}
+		Spacing = {
+			     100.000000
+			     100.000000
+			              0
+}
+		BasisX = {
+			       1.000000
+			              0
+			              0
+}
+		BasisY = {
+			              0
+			       1.000000
+			              0
+}
+		BasisZ = {
+			              0
+			              0
+			       1.000000
+}
+		FieldData Begin
+			Observed_Mag Begin
+				Resource	= Observed_Mag.igmesh/Observed_Mag.ers
+				Name	= Observed_Mag
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= Observed_Mag
+				NumElem	= 10000
+			Observed_Mag End
+		FieldData End
+	MeshGrid End
+MetaData End

@@ -1,0 +1,65 @@
+DatasetHeader Begin
+	LastUpdated	= Sun Sep 13 01:02:48 GMT 2015
+	Version	= "5.0"
+	DataSetType	= ERStorage
+	DataType	= Raster
+	HeaderOffset	= 0
+	CoordinateSpace Begin
+		#Projection	= "RAW"
+		CoordinateType	= EN
+		#Datum	= "RAW"
+		Rotation	= 0:0:0 
+	CoordinateSpace End
+	ByteOrder	= LSBFirst
+	RasterInfo Begin
+		CellType	= IEEE8ByteReal
+		NrOfLines	= 334
+		NrOfCellsPerLine	= 334
+		NrOfBands	= 1
+		NullCellValue	=          -99999
+		CellInfo Begin
+			Xdimension	=              30
+			Ydimension	=              30
+		CellInfo End
+		RegistrationCellX	= 0
+		RegistrationCellY	= 0
+		RegistrationCoord Begin
+			Eastings	=               0
+			Northings	=           10000
+		RegistrationCoord End
+		RegionInfo Begin
+			Type	= Polygon
+			RegionName	= "All"
+			SubRegion = {
+				0 0
+				0 334
+				334 334
+				334 0
+}
+			Stats Begin
+				NumberOfBands	= 1
+				NumberOfNonNullCells = {
+					111556
+}
+				NumberOfNullCells = {
+					0
+}
+				MinimumValue = {
+					     991.400196
+}
+				MaximumValue = {
+					    2220.528004
+}
+				MeanValue = {
+					    1353.263844
+}
+				MedianValue = {
+					    1353.263844
+}
+				CovarianceMatrix = {
+					   56545.911109
+}
+			Stats End
+		RegionInfo End
+	RasterInfo End
+DatasetHeader End

@@ -1,0 +1,76 @@
+
+*******************************
+Property Optimization Report:
+
+
+Optimizing model susceptibilities
+
+
+IGRF used for this run
+
+Magnitude:    56600.00 nT  Inclination:   -62.00  Declination:     7.60
+X component:   3514.33 nT
+Y component:  26338.67 nT
+Z component:  49974.83 nT
+
+
+Observed geophysics grid used:
+
+ observed_TMI_1.ers
+
+
+Number of formations considered: 3
+
+Model response grids used:
+
+ Layer 3, Cover:
+
+  calculated_bylitho_TMI_E_3.ers
+  calculated_bylitho_TMI_N_3.ers
+  calculated_bylitho_TMI_D_3.ers
+
+ Layer 2, Host_rock:
+
+  calculated_bylitho_TMI_E_2.ers
+  calculated_bylitho_TMI_N_2.ers
+  calculated_bylitho_TMI_D_2.ers
+
+ Layer 1, Granite:
+
+  calculated_bylitho_TMI_E_1.ers
+  calculated_bylitho_TMI_N_1.ers
+  calculated_bylitho_TMI_D_1.ers
+
+
+Number of valid grid cells used: 400, rejected spikes 0, nulls 0
+
+Initial properties:
+
+           Formation, PileNo,                       Mean,       StdDev,  Lower Bound,  Upper Bound
+               Cover,      3,                   0.000200,     0.000100,     0.000000,     0.000400
+           Host_rock,      2,                   0.020000,     0.010000,     0.000000,     0.040000
+             Granite,      1,                   0.040000,     0.020000,     0.000000,     0.080000
+
+
+Levenberg-Marquardt returned after 20 out of 100000 iterations.
+
+Reason: Stopped by small incremental improvement
+Initial misfit: 49.736728 
+Final misfit:   0.869128
+
+
+Optimised properties:
+
+           Formation, PileNo,  Recommended,   Input Mean,       StdDev,  Lower Bound,  Upper Bound
+               Cover,      3,     0.000012,     0.000200,     0.000100,     0.000000,     0.000400
+           Host_rock,      2,     0.001830,     0.020000,     0.010000,     0.000000,     0.040000
+             Granite,      1,     0.004251,     0.040000,     0.020000,     0.000000,     0.080000
+
+Trend added to optimized grid: +0.000288768 * x -3.95524e-005 * y -1.21043
+
+
+Creating trend-matched, optimised response grid: optimized_TMI_1.ers
+
+
+Optimization finished
+

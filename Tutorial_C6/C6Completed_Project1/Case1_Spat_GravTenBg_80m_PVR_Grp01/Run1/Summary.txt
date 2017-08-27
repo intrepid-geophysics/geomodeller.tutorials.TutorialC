@@ -1,0 +1,24 @@
+	Summary of Case1_Spat_GravTenBg_80m_PVR_Grp01/Run1 (18.72 minutes)
+
+	Total Iterations                               672000
+
+	Total Proposals                                672000 (2153571 / hour)
+		InterFormation (Formation Changed  )   336584 (Proposal to change boundary resulted in formation change)
+		InterFormation (Formation Unchanged)        0 (Proposal to change boundary left formation unchanged)
+		IntraFormation                         335416 (Proposal to change petrophysical properties only)
+
+	TotalAcceptanceCount                           169435 (542991 / hour)
+		InterFormation (Formation Changed  )     3756 of   336584
+		InterFormation (Formation Unchanged)        0 of        0
+		IntraFormation                         165679 of   335416
+
+	TotalRejectCount                               502565
+	    GeologyRejects                             205013
+		PreserveTopology                            0 of        0
+		PreserveVerticalRelationship           205013 of   336584
+		Commonality                                 0 of        0
+		CommonalityVolume                           0 of        0
+		Volume                                      0 of        0
+		Shape                                       0 of        0
+	    GeophysicsRejects                          297552
+		GeophysicalRejects[1]=                 297552 of  1704956

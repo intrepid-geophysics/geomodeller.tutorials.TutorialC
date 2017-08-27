@@ -1,0 +1,65 @@
+
+*******************************
+Property Optimization Report:
+
+
+Optimizing model densities
+
+
+
+Observed geophysics grid used:
+
+ observed_Gravimetry_1.ers
+
+
+Number of formations considered: 3
+
+Model response grids used:
+
+ Layer 3, Cover:
+
+  calculated_bylitho_Gravimetry_3.ers
+
+ Layer 2, Host_rock:
+
+  calculated_bylitho_Gravimetry_2.ers
+
+ Layer 1, Granite:
+
+  calculated_bylitho_Gravimetry_1.ers
+
+
+Number of valid grid cells used: 400, rejected spikes 0, nulls 0
+
+Initial properties:
+
+           Formation, PileNo,                       Mean,       StdDev,  Lower Bound,  Upper Bound
+               Cover,      3,                   2.500000,     0.500000,     1.500000,     3.500000
+           Host_rock,      2,                   3.000000,     0.500000,     2.000000,     4.000000
+             Granite,      1,                   2.500000,     1.000000,     0.500000,     4.500000
+
+Reference density: 2.200000
+
+
+Levenberg-Marquardt returned after 25 out of 100000 iterations.
+
+Reason: Stopped by small incremental improvement
+Initial misfit: 36.123161 
+Final misfit:   0.407294
+
+
+Optimised properties:
+
+           Formation, PileNo,  Recommended,   Input Mean,       StdDev,  Lower Bound,  Upper Bound
+               Cover,      3,     2.283305,     2.500000,     0.500000,     1.500000,     3.500000
+           Host_rock,      2,     2.631513,     3.000000,     0.500000,     2.000000,     4.000000
+             Granite,      1,     3.045903,     2.500000,     1.000000,     0.500000,     4.500000
+
+Trend added to optimized grid: +0.000268665 * x -0.000113805 * y -11.7116
+
+
+Creating trend-matched, optimised response grid: optimized_Gravimetry_1.ers
+
+
+Optimization finished
+

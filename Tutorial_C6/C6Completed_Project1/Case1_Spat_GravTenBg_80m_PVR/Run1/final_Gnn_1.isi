@@ -1,0 +1,10 @@
+MetaData Begin
+	Name	= final_Gnn_1.ers
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build d6f2b624fe14+ "
+	final_Gnn_1 Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Bands	= 1
+	final_Gnn_1 End
+MetaData End

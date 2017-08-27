@@ -1,0 +1,80 @@
+[12/09/2015 17:39:17.270000]  >>>>  NewCase_GMT
+Creating New Case Case1_JointInv_FixCov_ShpVol
+[12/09/2015 17:39:19.274000]  <<<<  NewCase_GMT
+[12/09/2015 17:39:19.276000]  >>>>  CaseControl_GMT
+#SET LAW for Cover is Movable Normal
+#SET LAW for Cover is Movable Normal
+#SET LAW for Cover is Movable Normal
+#SET LAW for Host_rock is Movable Normal
+#SET LAW for Host_rock is Movable Normal
+#SET LAW for Host_rock is Movable Normal
+#SET LAW for Granite is Movable Normal
+#SET LAW for Granite is Movable Normal
+#SET LAW for Granite is Movable Normal
+#SET LAW for Cover is Density Normal
+#SET LAW for Cover is Density Normal
+#SET LAW for Cover is Density Normal
+#SET LAW for Host_rock is Density Normal
+#SET LAW for Host_rock is Density Normal
+#SET LAW for Host_rock is Density Normal
+#SET LAW for Granite is Density LogNormal
+#SET LAW for Granite is Density Normal
+#SET LAW for Granite is Density Normal
+#SET LAW for Cover is Susceptibility LogNormal
+#SET LAW for Cover is Susceptibility Normal
+#SET LAW for Cover is Susceptibility Normal
+#SET LAW for Host_rock is Susceptibility LogNormal
+#SET LAW for Host_rock is Susceptibility LogNormal
+#SET LAW for Host_rock is Susceptibility Normal
+#SET LAW for Granite is Susceptibility LogNormal
+#SET LAW for Granite is Susceptibility Normal
+#SET LAW for Granite is Susceptibility Normal
+#Preserve vertical relationship for Cover ,Index: 1  no  yes yes
+#Preserve vertical relationship for Host_rock ,Index: 2  no  no  yes
+#Preserve vertical relationship for Granite ,Index: 3  no  no  no 
+#SET LAW for Cover is CommonalityVolume Normal
+#SET LAW for Cover is CommonalityVolume Normal
+#SET LAW for Cover is CommonalityVolume Normal
+#SET LAW for Host_rock is CommonalityVolume Normal
+#SET LAW for Host_rock is CommonalityVolume Normal
+#SET LAW for Host_rock is CommonalityVolume Normal
+#SET LAW for Granite is CommonalityVolume Normal
+#SET LAW for Granite is CommonalityVolume Normal
+#SET LAW for Granite is CommonalityVolume Normal
+#SET LAW for Cover is Commonality Weibull
+#SET LAW for Cover is Commonality Normal
+#SET LAW for Cover is Commonality Normal
+#SET LAW for Host_rock is Commonality Weibull
+#SET LAW for Host_rock is Commonality Normal
+#SET LAW for Host_rock is Commonality Normal
+#SET LAW for Granite is Commonality Weibull
+#SET LAW for Granite is Commonality Normal
+#SET LAW for Granite is Commonality Normal
+#SET LAW for Cover is ShapeRatio LogNormal
+#SET LAW for Cover is ShapeRatio Normal
+#SET LAW for Cover is ShapeRatio Normal
+#SET LAW for Host_rock is ShapeRatio LogNormal
+#SET LAW for Host_rock is ShapeRatio Normal
+#SET LAW for Host_rock is ShapeRatio Normal
+#SET LAW for Granite is ShapeRatio LogNormal
+#SET LAW for Granite is ShapeRatio Normal
+#SET LAW for Granite is ShapeRatio Normal
+#SET LAW for Cover is VolumeRatio LogNormal
+#SET LAW for Cover is VolumeRatio Normal
+#SET LAW for Cover is VolumeRatio Normal
+#SET LAW for Host_rock is VolumeRatio LogNormal
+#SET LAW for Host_rock is VolumeRatio Normal
+#SET LAW for Host_rock is VolumeRatio Normal
+#SET LAW for Granite is VolumeRatio LogNormal
+#SET LAW for Granite is VolumeRatio Normal
+#SET LAW for Granite is VolumeRatio Normal
+[12/09/2015 17:39:19.323000]  <<<<  CaseControl_GMT
+[12/09/2015 17:39:19.328000]  >>>>  NewRun_GMT
+[12/09/2015 17:39:19.369000]  <<<<  NewRun_GMT
+[12/09/2015 17:39:19.372000]  >>>>  RunControl_GMT
+[12/09/2015 17:39:19.409000]  <<<<  RunControl_GMT
+[12/09/2015 17:39:19.412000]  >>>>  SetFixedCells_GMT
+[12/09/2015 17:39:19.449000]  <<<<  SetFixedCells_GMT
+[12/09/2015 17:39:19.452000]  >>>>  Run_GMT
+Running Case Case1_JointInv_FixCov_ShpVol, Number CPU's 4 
+[12/09/2015 17:40:11.260000]  <<<<  Run_GMT

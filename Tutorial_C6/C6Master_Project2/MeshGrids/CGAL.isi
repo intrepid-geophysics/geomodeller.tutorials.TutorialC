@@ -1,0 +1,52 @@
+MetaData Begin
+	Name	= CGAL.igmesh
+	Version	= "Intrepid invbatch v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build 0ded2729519c+ "
+	triangle_TetrahedraRank Begin
+		DataType	= Signed32BitInteger
+		ByteOrder	= LSBFirst
+		Primitive	= triangle
+		Alias	= Lithology
+		Units	= "Lithology"
+	triangle_TetrahedraRank End
+	triangle_TetrahedraNo Begin
+		DataType	= Signed32BitInteger
+		ByteOrder	= LSBFirst
+		Primitive	= triangle
+		Alias	= NONE
+		Units	= "NONE"
+	triangle_TetrahedraNo End
+	MeshGrid Begin
+		Type	= unstructured-mesh
+		Dimensions	= 3
+		Purpose	= MODEL
+		Description	= no description
+		Suffix	= ..DIR
+		Format	= iotable
+		Name	= CGAL
+		XYZ Begin
+			Resource	= CGAL.igmesh/node..DIR
+			Primitive	= node
+			NumElem	= 13021
+		XYZ End
+		FieldData Begin
+			TetrahedraRank Begin
+				Resource	= CGAL.igmesh/triangle..DIR
+				Name	= TetrahedraRank
+				Primitive	= triangle
+				DataType	= Signed32BitInteger
+				Units	= Lithology
+				Alias	= Lithology
+				NumElem	= 237832
+			TetrahedraRank End
+			TetrahedraNo Begin
+				Resource	= CGAL.igmesh/triangle..DIR
+				Name	= TetrahedraNo
+				Primitive	= triangle
+				DataType	= Signed32BitInteger
+				Units	= NONE
+				Alias	= NONE
+				NumElem	= 237832
+			TetrahedraNo End
+		FieldData End
+	MeshGrid End
+MetaData End

@@ -1,0 +1,22 @@
+InversionTask {
+ForwardModelFromVoxet {
+  input_voxet: "D:/NewTutorial_2014/Tutorial_C/Tutorial_C6/C6Beginning_Project_working/Case1_FM_FFT_Boug_80m/Run1/initial.vo"
+  fields {
+    node: "Density"
+  }
+  InputVoxetAlreadyProperty: true
+  product: GravityTensors
+  coordsys: END
+  drape_elevation_grid: "D:/NewTutorial_2014/Tutorial_C/Tutorial_C6/C6Beginning_Project_working/Case1_FM_FFT_Boug_80m/Run1/compute_Surface_1.ers"
+  output_gridname: "D:/NewTutorial_2014/Tutorial_C/Tutorial_C6/C6Beginning_Project_working/Case1_FM_FFT_Boug_80m/Run1/calculated_GravityTensors_1.ers"
+  expansionmethod: Mirror
+  horizontalexpansionfactor: 100
+  verticalexpansionfactor: 1500
+  include_border_effect: true
+  LanczosTaper: true
+  POSC_CoordinateSystem: "Local"
+  method: FastFourierTransform
+  ObservedReferenceGrid: "D:/NewTutorial_2014/Tutorial_C/Tutorial_C6/C6Beginning_Project_working/Case1_FM_FFT_Boug_80m/Run1/observed_GravityTensors_1.ers"
+  Number_CPUs: 4
+}
+}

@@ -1,0 +1,95 @@
+MetaData Begin
+	Name	= Case1_Fwd_Gz_Run1_2D.igmesh
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build 0ded2729519c+ "
+	quad_calculated_Gravimetry_1 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= calculated_Gravimetry_1
+		Units	= "RAW"
+	quad_calculated_Gravimetry_1 End
+	quad_compute_Surface_1 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= compute_Surface_1
+		Units	= "RAW"
+	quad_compute_Surface_1 End
+	quad_observed_Gravimetry_1 Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= observed_Gravimetry_1
+		Units	= "RAW"
+	quad_observed_Gravimetry_1 End
+	MeshGrid Begin
+		Type	= regular-grid
+		Dimensions	= 2
+		Purpose	= MODEL
+		Description	= no description
+		Suffix	= .ers
+		Format	= iogrid
+		Name	= Case1_Fwd_Gz_Run1_2D
+		Projection	= "Local"
+		Datum	= "WGS84"
+		GridExtents = {
+			             20
+			             20
+			              1
+}
+		Origin = {
+			     250.000000
+			     250.000000
+			              0
+}
+		Spacing = {
+			     500.000000
+			     500.000000
+			              0
+}
+		BasisX = {
+			       1.000000
+			              0
+			              0
+}
+		BasisY = {
+			              0
+			       1.000000
+			              0
+}
+		BasisZ = {
+			              0
+			              0
+			       1.000000
+}
+		FieldData Begin
+			calculated_Gravimetry_1 Begin
+				Resource	= Case1_Fwd_Gz_Run1_2D.igmesh/calculated_Gravimetry_1.ers
+				Name	= calculated_Gravimetry_1
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= calculated_Gravimetry_1
+				NumElem	= 400
+			calculated_Gravimetry_1 End
+			compute_Surface_1 Begin
+				Resource	= Case1_Fwd_Gz_Run1_2D.igmesh/compute_Surface_1.ers
+				Name	= compute_Surface_1
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= compute_Surface_1
+				NumElem	= 400
+			compute_Surface_1 End
+			observed_Gravimetry_1 Begin
+				Resource	= Case1_Fwd_Gz_Run1_2D.igmesh/observed_Gravimetry_1.ers
+				Name	= observed_Gravimetry_1
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= RAW
+				Alias	= observed_Gravimetry_1
+				NumElem	= 400
+			observed_Gravimetry_1 End
+		FieldData End
+	MeshGrid End
+MetaData End

@@ -1,0 +1,9 @@
+MetaData Begin
+	Name	= segy_test.jpg
+	Version	= "Intrepid GeoModeller v6.0.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build e50fa9d75c54+ "
+	segy_test.jpg Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Bands	= 3
+	segy_test.jpg End
+MetaData End

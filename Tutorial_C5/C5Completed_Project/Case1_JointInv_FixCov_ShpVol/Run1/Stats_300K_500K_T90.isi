@@ -1,0 +1,105 @@
+MetaData Begin
+	Name	= Stats_300K_500K_T90.vo
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build d6f2b624fe14+ "
+	Entropy Begin
+		DataType	= IEEE4ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Comment	= SummaryStats
+		Alias	= Entropy
+		Units	= "none"
+	Entropy End
+	ChangeCount Begin
+		DataType	= Signed32BitInteger
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Comment	= SummaryStats
+		Alias	= ChangeCount
+		Units	= "none"
+	ChangeCount End
+	MeanDensity Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Comment	= SummaryStats
+		Alias	= MeanDensity
+		Units	= "none"
+	MeanDensity End
+	StdDevDensity Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Comment	= SummaryStats
+		Alias	= StdDevDensity
+		Units	= "none"
+	StdDevDensity End
+	MeanSusceptibility Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Comment	= SummaryStats
+		Alias	= MeanSusceptibility
+		Units	= "none"
+	MeanSusceptibility End
+	StdDevSusceptibility Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Comment	= SummaryStats
+		Alias	= StdDevSusceptibility
+		Units	= "none"
+	StdDevSusceptibility End
+	MostProbable Begin
+		DataType	= IEEE4ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Comment	= SummaryStats
+		Units	= "Lithology"
+	MostProbable End
+	MostProbableThresholded Begin
+		DataType	= IEEE4ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Comment	= SummaryStats
+		Alias	= Lithology
+		Units	= "Lithology"
+	MostProbableThresholded End
+	Prob_AboveTopo Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Comment	= SummaryStats
+		Alias	= Prob_AboveTopo
+		Units	= "%"
+	Prob_AboveTopo End
+	Prob_Granite Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Prob_Granite
+		Units	= "%"
+	Prob_Granite End
+	Prob_Host_rock Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Prob_Host_rock
+		Units	= "%"
+	Prob_Host_rock End
+	Prob_Cover Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Prob_Cover
+		Units	= "%"
+	Prob_Cover End
+	Extensions Begin
+		LithologyMapping Begin
+			Map = {
+				"1" "Granite" "255a237r017g137b"
+				"2" "Host_rock" "255a151r255g255b"
+				"3" "Cover" "255a255r249g205b"
+}
+		LithologyMapping End
+	Extensions End
+MetaData End

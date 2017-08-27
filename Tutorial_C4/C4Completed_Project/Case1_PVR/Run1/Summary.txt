@@ -1,0 +1,24 @@
+	Summary of Case1_PVR/Run1 (14 seconds)
+
+	Total Iterations                               400000
+
+	Total Proposals                                400000 (102229195 / hour)
+		InterFormation (Formation Changed  )   400000 (Proposal to change boundary resulted in formation change)
+		InterFormation (Formation Unchanged)        0 (Proposal to change boundary left formation unchanged)
+		IntraFormation                              0 (Proposal to change petrophysical properties only)
+
+	TotalAcceptanceCount                           108890 (27829342 / hour)
+		InterFormation (Formation Changed  )   108890 of   400000
+		InterFormation (Formation Unchanged)        0 of        0
+		IntraFormation                              0 of        0
+
+	TotalRejectCount                               291110
+	    GeologyRejects                             291110
+		PreserveTopology                            0 of        0
+		PreserveVerticalRelationship           291110 of   400000
+		Commonality                                 0 of        0
+		CommonalityVolume                           0 of        0
+		Volume                                      0 of        0
+		Shape                                       0 of        0
+	    GeophysicsRejects                               0
+		GeophysicalRejects[1]=                      0 of        0

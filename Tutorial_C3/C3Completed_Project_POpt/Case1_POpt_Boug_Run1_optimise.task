@@ -1,0 +1,18 @@
+InversionTask {
+	Property_Optimization {
+		filename: "C3Completed_Project_POpt.xml";
+		case: "Case1_POpt_Boug";
+		run: "Run1";
+		ReportFile: "Case1_POpt_Boug/Run1/Property_Optimization.rpt";
+		EstimateDensity: true;
+		SetLaw {
+			LithologyProperty { lithology: "Cover"; index_voxet_key: 3; property: Density; ProbabilityDistributionFunction {type: Normal; mean: 2.5; stddev: 0.5;} lower_bound: 1.500000; upper_bound: 3.500000;}
+			LithologyProperty { lithology: "Host_rock"; index_voxet_key: 2; property: Density; ProbabilityDistributionFunction {type: Normal; mean: 3; stddev: 0.5;} lower_bound: 2.000000; upper_bound: 4.000000;}
+			LithologyProperty { lithology: "Granite"; index_voxet_key: 1; property: Density; ProbabilityDistributionFunction {type: LogNormal; mean: 2.5; stddev: 1;} lower_bound: 0.500000; upper_bound: 4.500000;}
+		}
+		#maxAbsoluteObserved: 1000.0;
+		MaximumIterations: 100000;
+		MatchTrends: true;
+		ReferenceDensity: 2.200000;
+	}
+}

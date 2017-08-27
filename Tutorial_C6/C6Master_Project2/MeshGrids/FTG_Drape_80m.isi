@@ -1,0 +1,60 @@
+MetaData Begin
+	Name	= FTG_Drape_80m.igmesh
+	Version	= "Intrepid invbatch v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build 0ded2729519c+ "
+	quad_FTG_Drape_80m Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= FTG_Drape_80m
+	quad_FTG_Drape_80m End
+	MeshGrid Begin
+		Type	= regular-grid
+		Dimensions	= 2
+		Purpose	= MODEL
+		Description	= no description
+		Suffix	= .ers
+		Format	= iogrid
+		Name	= FTG_Drape_80m
+		GridExtents = {
+			            335
+			            335
+			              1
+}
+		Origin = {
+			     -15.000000
+			      -5.000000
+			              0
+}
+		Spacing = {
+			      30.000000
+			      30.000000
+			              0
+}
+		BasisX = {
+			       1.000000
+			              0
+			              0
+}
+		BasisY = {
+			              0
+			       1.000000
+			              0
+}
+		BasisZ = {
+			              0
+			              0
+			       1.000000
+}
+		FieldData Begin
+			FTG_Drape_80m Begin
+				Resource	= FTG_Drape_80m.igmesh/FTG_Drape_80m.ers
+				Name	= FTG_Drape_80m
+				Primitive	= quad
+				DataType	= IEEE8ByteReal
+				Units	= none
+				Alias	= FTG_Drape_80m
+				NumElem	= 112225
+			FTG_Drape_80m End
+		FieldData End
+	MeshGrid End
+MetaData End

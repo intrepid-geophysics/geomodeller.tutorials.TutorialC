@@ -1,0 +1,92 @@
+MetaData Begin
+	Name	= Case1_Spat_GravTenBg_80m_NewG_POnly_Run1_3D_final.igmesh
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build d6f2b624fe14+ "
+	voxet_Lithology Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Lithology
+		Units	= "Lithology"
+	voxet_Lithology End
+	voxet_FixedCell Begin
+		DataType	= Signed32BitInteger
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= FixedCell
+		Units	= "FixedCell"
+	voxet_FixedCell End
+	voxet_Density Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Density
+		Units	= "none"
+	voxet_Density End
+	MeshGrid Begin
+		Type	= regular-grid
+		Dimensions	= 3
+		Purpose	= MODEL
+		Suffix	= .vo
+		Format	= iovoxet
+		Name	= Case1_Spat_GravTenBg_80m_NewG_POnly_Run1_3D_final
+		GridExtents = {
+			             40
+			             40
+			             42
+}
+		Origin = {
+			     125.000000
+			     125.000000
+			   -1950.000000
+}
+		Spacing = {
+			     250.000000
+			     250.000000
+			     100.000000
+}
+		BasisX = {
+			       1.000000
+			              0
+			              0
+}
+		BasisY = {
+			              0
+			       1.000000
+			              0
+}
+		BasisZ = {
+			              0
+			              0
+			       1.000000
+}
+		FieldData Begin
+			Lithology Begin
+				Resource	= Case1_Spat_GravTenBg_80m_NewG_POnly_Run1_3D_final.igmesh/Case1_Spat_GravTenBg_80m_NewG_POnly_Run1_3D_final.vo
+				Name	= Lithology
+				Primitive	= voxet
+				DataType	= IEEE8ByteReal
+				Units	= Lithology
+				Alias	= Lithology
+				NumElem	= 67200
+			Lithology End
+			FixedCell Begin
+				Resource	= Case1_Spat_GravTenBg_80m_NewG_POnly_Run1_3D_final.igmesh/Case1_Spat_GravTenBg_80m_NewG_POnly_Run1_3D_final.vo
+				Name	= FixedCell
+				Primitive	= voxet
+				DataType	= Signed32BitInteger
+				Units	= FixedCell
+				Alias	= FixedCell
+				NumElem	= 67200
+			FixedCell End
+			Density Begin
+				Resource	= Case1_Spat_GravTenBg_80m_NewG_POnly_Run1_3D_final.igmesh/Case1_Spat_GravTenBg_80m_NewG_POnly_Run1_3D_final.vo
+				Name	= Density
+				Primitive	= voxet
+				DataType	= IEEE8ByteReal
+				Units	= none
+				Alias	= Density
+				NumElem	= 67200
+			Density End
+		FieldData End
+	MeshGrid End
+MetaData End

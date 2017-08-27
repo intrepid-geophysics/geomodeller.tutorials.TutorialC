@@ -1,0 +1,205 @@
+MetaData Begin
+	Name	= Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.igmesh
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build d6f2b624fe14+ "
+	voxet_Entropy Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Entropy
+		Units	= "none"
+	voxet_Entropy End
+	voxet_ChangeCount Begin
+		DataType	= Signed32BitInteger
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= ChangeCount
+		Units	= "none"
+	voxet_ChangeCount End
+	voxet_MeanDensity Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= MeanDensity
+		Units	= "none"
+	voxet_MeanDensity End
+	voxet_StdDevDensity Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= StdDevDensity
+		Units	= "none"
+	voxet_StdDevDensity End
+	voxet_MostProbable Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= ?
+		Units	= "Lithology"
+	voxet_MostProbable End
+	voxet_MostProbableThresholded Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Lithology
+		Units	= "Lithology"
+	voxet_MostProbableThresholded End
+	voxet_Prob_AboveTopo Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Prob_AboveTopo
+		Units	= "%"
+	voxet_Prob_AboveTopo End
+	voxet_Prob_Granite Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Prob_Granite
+		Units	= "%"
+	voxet_Prob_Granite End
+	voxet_Prob_Host_rock Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Prob_Host_rock
+		Units	= "%"
+	voxet_Prob_Host_rock End
+	voxet_Prob_Cover Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= voxet
+		Alias	= Prob_Cover
+		Units	= "%"
+	voxet_Prob_Cover End
+	MeshGrid Begin
+		Type	= regular-grid
+		Dimensions	= 3
+		Purpose	= MODEL
+		Description	= no description
+		Suffix	= .vo
+		Format	= iovoxet
+		Name	= Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90
+		GridExtents = {
+			             40
+			             40
+			             42
+}
+		Origin = {
+			     125.000000
+			     125.000000
+			   -1950.000000
+}
+		Spacing = {
+			     250.000000
+			     250.000000
+			     100.000000
+}
+		BasisX = {
+			       1.000000
+			              0
+			              0
+}
+		BasisY = {
+			              0
+			       1.000000
+			              0
+}
+		BasisZ = {
+			              0
+			              0
+			       1.000000
+}
+		FieldData Begin
+			Entropy Begin
+				Resource	= Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.igmesh/Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.vo
+				Name	= Entropy
+				Primitive	= voxet
+				DataType	= IEEE8ByteReal
+				Units	= none
+				Alias	= Entropy
+				NumElem	= 67200
+			Entropy End
+			ChangeCount Begin
+				Resource	= Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.igmesh/Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.vo
+				Name	= ChangeCount
+				Primitive	= voxet
+				DataType	= Signed32BitInteger
+				Units	= none
+				Alias	= ChangeCount
+				NumElem	= 67200
+			ChangeCount End
+			MeanDensity Begin
+				Resource	= Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.igmesh/Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.vo
+				Name	= MeanDensity
+				Primitive	= voxet
+				DataType	= IEEE8ByteReal
+				Units	= none
+				Alias	= MeanDensity
+				NumElem	= 67200
+			MeanDensity End
+			StdDevDensity Begin
+				Resource	= Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.igmesh/Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.vo
+				Name	= StdDevDensity
+				Primitive	= voxet
+				DataType	= IEEE8ByteReal
+				Units	= none
+				Alias	= StdDevDensity
+				NumElem	= 67200
+			StdDevDensity End
+			MostProbable Begin
+				Resource	= Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.igmesh/Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.vo
+				Name	= MostProbable
+				Primitive	= voxet
+				DataType	= IEEE8ByteReal
+				Units	= Lithology
+				Alias	= ?
+				NumElem	= 67200
+			MostProbable End
+			MostProbableThresholded Begin
+				Resource	= Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.igmesh/Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.vo
+				Name	= MostProbableThresholded
+				Primitive	= voxet
+				DataType	= IEEE8ByteReal
+				Units	= Lithology
+				Alias	= Lithology
+				NumElem	= 67200
+			MostProbableThresholded End
+			Prob_AboveTopo Begin
+				Resource	= Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.igmesh/Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.vo
+				Name	= Prob_AboveTopo
+				Primitive	= voxet
+				DataType	= IEEE8ByteReal
+				Units	= %
+				Alias	= Prob_AboveTopo
+				NumElem	= 67200
+			Prob_AboveTopo End
+			Prob_Granite Begin
+				Resource	= Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.igmesh/Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.vo
+				Name	= Prob_Granite
+				Primitive	= voxet
+				DataType	= IEEE8ByteReal
+				Units	= %
+				Alias	= Prob_Granite
+				NumElem	= 67200
+			Prob_Granite End
+			Prob_Host_rock Begin
+				Resource	= Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.igmesh/Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.vo
+				Name	= Prob_Host_rock
+				Primitive	= voxet
+				DataType	= IEEE8ByteReal
+				Units	= %
+				Alias	= Prob_Host_rock
+				NumElem	= 67200
+			Prob_Host_rock End
+			Prob_Cover Begin
+				Resource	= Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.igmesh/Case1_Spat_GravTenBg_80m_PVR_Grp01_Run1_3D_Stats_500K_672K_T90.vo
+				Name	= Prob_Cover
+				Primitive	= voxet
+				DataType	= IEEE8ByteReal
+				Units	= %
+				Alias	= Prob_Cover
+				NumElem	= 67200
+			Prob_Cover End
+		FieldData End
+	MeshGrid End
+MetaData End

@@ -1,0 +1,13 @@
+MetaData Begin
+	Name	= observed_TMI_2.ers
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build d6f2b624fe14+ "
+	observed_TMI_2 Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= observed_TMI_2
+		Bands	= 1
+		Units	= "RAW"
+	observed_TMI_2 End
+MetaData End

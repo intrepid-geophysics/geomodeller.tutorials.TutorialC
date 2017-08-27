@@ -1,0 +1,25 @@
+	Summary of Case1_JointInv_FixCov_Shp/Run1 (55 seconds)
+
+	Total Iterations                               500000
+
+	Total Proposals                                500000 (32495669 / hour)
+		InterFormation (Formation Changed  )   250399 (Proposal to change boundary resulted in formation change)
+		InterFormation (Formation Unchanged)        0 (Proposal to change boundary left formation unchanged)
+		IntraFormation                         249601 (Proposal to change petrophysical properties only)
+
+	TotalAcceptanceCount                           176170 (11449524 / hour)
+		InterFormation (Formation Changed  )     1273 of   250399
+		InterFormation (Formation Unchanged)        0 of        0
+		IntraFormation                         174897 of   249601
+
+	TotalRejectCount                               323830
+	    GeologyRejects                             216207
+		PreserveTopology                            0 of        0
+		PreserveVerticalRelationship           123377 of   250399
+		Commonality                               497 of   127022
+		CommonalityVolume                           0 of        0
+		Volume                                      0 of        0
+		Shape                                   92333 of   126525
+	    GeophysicsRejects                          107623
+		GeophysicalRejects[1]=                  85497 of   283793
+		GeophysicalRejects[2]=                  22126 of   198296

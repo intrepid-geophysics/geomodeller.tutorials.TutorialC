@@ -1,0 +1,3673 @@
+
+[02/09/2015 17:24:14.969000] Processing job file: "001_Case1_NoTests_Run1_inversion.task"
+
+
+[02/09/2015 17:29:26.636000] Processing job file: "001_Case1_NoTests_Run1_inversion.task"
+
+
+[02/09/2015 17:30:56.441000] Processing job file: "001_Case1_NoTests_Run1_inversion.task"
+
+NewCase_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_NoTests"
+x_cell_size: 500
+y_cell_size: 500
+z_cell_size: 225
+east_minimum_voxet: 0
+east_maximum_voxet: 10000
+north_minimum_voxet: 0
+north_maximum_voxet: 10000
+elevation_minimum_voxet: -2000
+elevation_maximum_voxet: 2500
+VariableZResolution {
+  use_variable_z_resolution: false
+  topo_part_boundary_at: 2500
+  lower_z_cell_size: 225
+  geometric_factor: 1
+}
+ObservedGridList {
+  ObservedGrid {
+    grid: "../Data/Observed_Boug_Grav_2p2.ers"
+    type: Gravimetry
+    compute_surface_style: OnTopographyWithClearance
+    mean_elevation: 0
+    compute_surface_z_sampling: 225
+    Interpolate: false
+    precision: 0.1
+    Match_Trend: false
+    Match_Trend_Degree: 0
+    Match_Trend_Rate: 0
+    Output_Trends: false
+  }
+}
+}
+CaseControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_NoTests"
+SetReferenceDensity: 2.2
+SetAboveTopoDensity: 2.2
+SetReferenceMagneticField {
+  Magnitude: 56600
+  Inclination: -62
+  Declination: 7.6
+}
+SetLaw {
+  LithologyProperty {
+    lithology: "Cover"
+    property: Movable
+    fixed: false
+    index_voxet_key: 3
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Movable
+    fixed: false
+    index_voxet_key: 2
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Movable
+    fixed: false
+    index_voxet_key: 1
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.2
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.5
+      stddev: 0.1
+      percentage: 70
+    }
+    ProbabilityDistributionFunction2 {
+      type: Normal
+      mean: 3.1
+      stddev: 0.1
+      percentage: 30
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 2.9
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+}
+}
+NewRun_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_NoTests"
+run: "Run1"
+NumberOfIterations: 400000
+}
+RunControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_NoTests"
+run: "Run1"
+ShapeRatioTest {
+  SetWeights: none
+  IncludeAboveTopoFaces: false
+  IncludeOutsideFaces: false
+  Allow: false
+}
+VolumeRatioTest {
+  SetWeights: none
+  Allow: false
+}
+CommonalityTest {
+  SetWeights: none
+  Allow: false
+}
+CommonalityVolumeTest {
+  SetWeights: none
+  Allow: false
+}
+DilationOrErosionFilter {
+  Rate: 2500
+  Allow: false
+}
+HomogeneousFilter {
+  Rate: 5000
+  Allow: false
+}
+LithologyInitialiseStyle: FromModel
+DensityInitialiseStyle: FromLawMean
+SusceptibilityInitialiseStyle: FromLawMean
+RemanentMagnetizationInitialiseStyle: FromLawMean
+AllowNeighbourPropertyDifferentCheck: false
+AllowGeophysicalTests: false
+AllowGeologicalTests: false
+PreserveTopology: false
+SetDualTemperatureMode: false
+LargeMisfitTemperature: 1
+LargeMisfitRMSThresholdFactor: 1
+Mode1TemperatureFactor: 1
+Mode1Duration: 100
+Mode2TemperatureFactor: 1000000
+Mode2Duration: 99900
+ProbabilityOfPropertyChangeOnly: 0
+PreserveVerticalRelationshipTest: false
+PropertyChangeOnFixedCell: false
+Seed: 1939
+NumberOfIterations: 400000
+include_border_effect: true
+method: Spatial
+}
+Run_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_NoTests"
+run: "Run1"
+Number_CPUs: 4
+}
+
+[02/09/2015 17:36:32.455000] Processing job file: "002_Case1_PVR_Run1_inversion.task"
+
+NewCase_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR"
+x_cell_size: 500
+y_cell_size: 500
+z_cell_size: 225
+east_minimum_voxet: 0
+east_maximum_voxet: 10000
+north_minimum_voxet: 0
+north_maximum_voxet: 10000
+elevation_minimum_voxet: -2000
+elevation_maximum_voxet: 2500
+VariableZResolution {
+  use_variable_z_resolution: false
+  topo_part_boundary_at: 2500
+  lower_z_cell_size: 225
+  geometric_factor: 1
+}
+ObservedGridList {
+  ObservedGrid {
+    grid: "../Data/Observed_Boug_Grav_2p2.ers"
+    type: Gravimetry
+    compute_surface_style: OnTopographyWithClearance
+    mean_elevation: 0
+    compute_surface_z_sampling: 225
+    Interpolate: false
+    precision: 0.1
+    Match_Trend: false
+    Match_Trend_Degree: 0
+    Match_Trend_Rate: 0
+    Output_Trends: false
+  }
+}
+}
+CaseControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR"
+SetReferenceDensity: 2.2
+SetAboveTopoDensity: 2.2
+SetReferenceMagneticField {
+  Magnitude: 56600
+  Inclination: -62
+  Declination: 7.6
+}
+SetLaw {
+  LithologyProperty {
+    lithology: "Cover"
+    property: Movable
+    fixed: false
+    index_voxet_key: 3
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Movable
+    fixed: false
+    index_voxet_key: 2
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Movable
+    fixed: false
+    index_voxet_key: 1
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.2
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.5
+      stddev: 0.1
+      percentage: 70
+    }
+    ProbabilityDistributionFunction2 {
+      type: Normal
+      mean: 3.1
+      stddev: 0.1
+      percentage: 30
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 2.9
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    preserve {
+      node: false
+      node: true
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    preserve {
+      node: false
+      node: false
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    preserve {
+      node: false
+      node: false
+      node: false
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+}
+}
+NewRun_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR"
+run: "Run1"
+NumberOfIterations: 400000
+}
+RunControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR"
+run: "Run1"
+ShapeRatioTest {
+  SetWeights: none
+  IncludeAboveTopoFaces: false
+  IncludeOutsideFaces: false
+  Allow: false
+}
+VolumeRatioTest {
+  SetWeights: none
+  Allow: false
+}
+CommonalityTest {
+  SetWeights: none
+  Allow: false
+}
+CommonalityVolumeTest {
+  SetWeights: none
+  Allow: false
+}
+DilationOrErosionFilter {
+  Rate: 2500
+  Allow: false
+}
+HomogeneousFilter {
+  Rate: 5000
+  Allow: false
+}
+LithologyInitialiseStyle: FromModel
+DensityInitialiseStyle: FromLawMean
+SusceptibilityInitialiseStyle: FromLawMean
+RemanentMagnetizationInitialiseStyle: FromLawMean
+AllowNeighbourPropertyDifferentCheck: false
+AllowGeophysicalTests: false
+AllowGeologicalTests: true
+PreserveTopology: false
+SetDualTemperatureMode: false
+LargeMisfitTemperature: 1
+LargeMisfitRMSThresholdFactor: 1
+Mode1TemperatureFactor: 1
+Mode1Duration: 100
+Mode2TemperatureFactor: 1000000
+Mode2Duration: 99900
+ProbabilityOfPropertyChangeOnly: 0
+PreserveVerticalRelationshipTest: true
+PropertyChangeOnFixedCell: false
+Seed: 1259
+NumberOfIterations: 400000
+include_border_effect: true
+method: Spatial
+}
+Run_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR"
+run: "Run1"
+Number_CPUs: 4
+}
+
+[02/09/2015 17:37: 3.021000] Processing job file: "003_Case1_PVR_Comm1_Run1_inversion.task"
+
+NewCase_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Comm1"
+x_cell_size: 500
+y_cell_size: 500
+z_cell_size: 225
+east_minimum_voxet: 0
+east_maximum_voxet: 10000
+north_minimum_voxet: 0
+north_maximum_voxet: 10000
+elevation_minimum_voxet: -2000
+elevation_maximum_voxet: 2500
+VariableZResolution {
+  use_variable_z_resolution: false
+  topo_part_boundary_at: 2500
+  lower_z_cell_size: 225
+  geometric_factor: 1
+}
+ObservedGridList {
+  ObservedGrid {
+    grid: "../Data/Observed_Boug_Grav_2p2.ers"
+    type: Gravimetry
+    compute_surface_style: OnTopographyWithClearance
+    mean_elevation: 0
+    compute_surface_z_sampling: 225
+    Interpolate: false
+    precision: 0.1
+    Match_Trend: false
+    Match_Trend_Degree: 0
+    Match_Trend_Rate: 0
+    Output_Trends: false
+  }
+}
+}
+CaseControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Comm1"
+SetReferenceDensity: 2.2
+SetAboveTopoDensity: 2.2
+SetReferenceMagneticField {
+  Magnitude: 56600
+  Inclination: -62
+  Declination: 7.6
+}
+SetLaw {
+  LithologyProperty {
+    lithology: "Cover"
+    property: Movable
+    fixed: false
+    index_voxet_key: 3
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Movable
+    fixed: false
+    index_voxet_key: 2
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Movable
+    fixed: false
+    index_voxet_key: 1
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.2
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.5
+      stddev: 0.1
+      percentage: 70
+    }
+    ProbabilityDistributionFunction2 {
+      type: Normal
+      mean: 3.1
+      stddev: 0.1
+      percentage: 30
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 2.9
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    preserve {
+      node: false
+      node: true
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    preserve {
+      node: false
+      node: false
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    preserve {
+      node: false
+      node: false
+      node: false
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.02
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+}
+}
+NewRun_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Comm1"
+run: "Run1"
+NumberOfIterations: 400000
+}
+RunControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Comm1"
+run: "Run1"
+ShapeRatioTest {
+  SetWeights: none
+  IncludeAboveTopoFaces: false
+  IncludeOutsideFaces: false
+  Allow: false
+}
+VolumeRatioTest {
+  SetWeights: none
+  Allow: false
+}
+CommonalityTest {
+  SetWeights: none
+  Allow: true
+}
+CommonalityVolumeTest {
+  SetWeights: none
+  Allow: false
+}
+DilationOrErosionFilter {
+  Rate: 2500
+  Allow: false
+}
+HomogeneousFilter {
+  Rate: 5000
+  Allow: false
+}
+LithologyInitialiseStyle: FromModel
+DensityInitialiseStyle: FromLawMean
+SusceptibilityInitialiseStyle: FromLawMean
+RemanentMagnetizationInitialiseStyle: FromLawMean
+AllowNeighbourPropertyDifferentCheck: false
+AllowGeophysicalTests: false
+AllowGeologicalTests: true
+PreserveTopology: false
+SetDualTemperatureMode: false
+LargeMisfitTemperature: 1
+LargeMisfitRMSThresholdFactor: 1
+Mode1TemperatureFactor: 1
+Mode1Duration: 100
+Mode2TemperatureFactor: 1000000
+Mode2Duration: 99900
+ProbabilityOfPropertyChangeOnly: 0
+PreserveVerticalRelationshipTest: true
+PropertyChangeOnFixedCell: false
+Seed: 1234
+NumberOfIterations: 400000
+include_border_effect: true
+method: Spatial
+}
+Run_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Comm1"
+run: "Run1"
+Number_CPUs: 4
+}
+
+[02/09/2015 17:37:31.774000] Processing job file: "004_Case1_PVR_Comm2_Run1_inversion.task"
+
+NewCase_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Comm2"
+x_cell_size: 500
+y_cell_size: 500
+z_cell_size: 225
+east_minimum_voxet: 0
+east_maximum_voxet: 10000
+north_minimum_voxet: 0
+north_maximum_voxet: 10000
+elevation_minimum_voxet: -2000
+elevation_maximum_voxet: 2500
+VariableZResolution {
+  use_variable_z_resolution: false
+  topo_part_boundary_at: 2500
+  lower_z_cell_size: 225
+  geometric_factor: 1
+}
+ObservedGridList {
+  ObservedGrid {
+    grid: "../Data/Observed_Boug_Grav_2p2.ers"
+    type: Gravimetry
+    compute_surface_style: OnTopographyWithClearance
+    mean_elevation: 0
+    compute_surface_z_sampling: 225
+    Interpolate: false
+    precision: 0.1
+    Match_Trend: false
+    Match_Trend_Degree: 0
+    Match_Trend_Rate: 0
+    Output_Trends: false
+  }
+}
+}
+CaseControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Comm2"
+SetReferenceDensity: 2.2
+SetAboveTopoDensity: 2.2
+SetReferenceMagneticField {
+  Magnitude: 56600
+  Inclination: -62
+  Declination: 7.6
+}
+SetLaw {
+  LithologyProperty {
+    lithology: "Cover"
+    property: Movable
+    fixed: false
+    index_voxet_key: 3
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Movable
+    fixed: false
+    index_voxet_key: 2
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Movable
+    fixed: false
+    index_voxet_key: 1
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.2
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.5
+      stddev: 0.1
+      percentage: 70
+    }
+    ProbabilityDistributionFunction2 {
+      type: Normal
+      mean: 3.1
+      stddev: 0.1
+      percentage: 30
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 2.9
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    preserve {
+      node: false
+      node: true
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    preserve {
+      node: false
+      node: false
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    preserve {
+      node: false
+      node: false
+      node: false
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+}
+}
+NewRun_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Comm2"
+run: "Run1"
+NumberOfIterations: 400000
+}
+RunControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Comm2"
+run: "Run1"
+ShapeRatioTest {
+  SetWeights: none
+  IncludeAboveTopoFaces: false
+  IncludeOutsideFaces: false
+  Allow: false
+}
+VolumeRatioTest {
+  SetWeights: none
+  Allow: false
+}
+CommonalityTest {
+  SetWeights: none
+  Allow: true
+}
+CommonalityVolumeTest {
+  SetWeights: none
+  Allow: false
+}
+DilationOrErosionFilter {
+  Rate: 2500
+  Allow: false
+}
+HomogeneousFilter {
+  Rate: 5000
+  Allow: false
+}
+LithologyInitialiseStyle: FromModel
+DensityInitialiseStyle: FromLawMean
+SusceptibilityInitialiseStyle: FromLawMean
+RemanentMagnetizationInitialiseStyle: FromLawMean
+AllowNeighbourPropertyDifferentCheck: false
+AllowGeophysicalTests: false
+AllowGeologicalTests: true
+PreserveTopology: false
+SetDualTemperatureMode: false
+LargeMisfitTemperature: 1
+LargeMisfitRMSThresholdFactor: 1
+Mode1TemperatureFactor: 1
+Mode1Duration: 100
+Mode2TemperatureFactor: 1000000
+Mode2Duration: 99900
+ProbabilityOfPropertyChangeOnly: 0
+PreserveVerticalRelationshipTest: true
+PropertyChangeOnFixedCell: false
+Seed: 1234
+NumberOfIterations: 400000
+include_border_effect: true
+method: Spatial
+}
+Run_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Comm2"
+run: "Run1"
+Number_CPUs: 4
+}
+
+[02/09/2015 17:38: 4.091000] Processing job file: "005_Case1_PVR_Comm3_Run1_inversion.task"
+
+NewCase_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Comm3"
+x_cell_size: 500
+y_cell_size: 500
+z_cell_size: 225
+east_minimum_voxet: 0
+east_maximum_voxet: 10000
+north_minimum_voxet: 0
+north_maximum_voxet: 10000
+elevation_minimum_voxet: -2000
+elevation_maximum_voxet: 2500
+VariableZResolution {
+  use_variable_z_resolution: false
+  topo_part_boundary_at: 2500
+  lower_z_cell_size: 225
+  geometric_factor: 1
+}
+ObservedGridList {
+  ObservedGrid {
+    grid: "../Data/Observed_Boug_Grav_2p2.ers"
+    type: Gravimetry
+    compute_surface_style: OnTopographyWithClearance
+    mean_elevation: 0
+    compute_surface_z_sampling: 225
+    Interpolate: false
+    precision: 0.1
+    Match_Trend: false
+    Match_Trend_Degree: 0
+    Match_Trend_Rate: 0
+    Output_Trends: false
+  }
+}
+}
+CaseControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Comm3"
+SetReferenceDensity: 2.2
+SetAboveTopoDensity: 2.2
+SetReferenceMagneticField {
+  Magnitude: 56600
+  Inclination: -62
+  Declination: 7.6
+}
+SetLaw {
+  LithologyProperty {
+    lithology: "Cover"
+    property: Movable
+    fixed: false
+    index_voxet_key: 3
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Movable
+    fixed: false
+    index_voxet_key: 2
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Movable
+    fixed: false
+    index_voxet_key: 1
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.2
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.5
+      stddev: 0.1
+      percentage: 70
+    }
+    ProbabilityDistributionFunction2 {
+      type: Normal
+      mean: 3.1
+      stddev: 0.1
+      percentage: 30
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 2.9
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    preserve {
+      node: false
+      node: true
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    preserve {
+      node: false
+      node: false
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    preserve {
+      node: false
+      node: false
+      node: false
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+}
+}
+NewRun_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Comm3"
+run: "Run1"
+NumberOfIterations: 400000
+}
+RunControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Comm3"
+run: "Run1"
+ShapeRatioTest {
+  SetWeights: none
+  IncludeAboveTopoFaces: false
+  IncludeOutsideFaces: false
+  Allow: false
+}
+VolumeRatioTest {
+  SetWeights: none
+  Allow: false
+}
+CommonalityTest {
+  SetWeights: none
+  Allow: true
+}
+CommonalityVolumeTest {
+  SetWeights: none
+  Allow: false
+}
+DilationOrErosionFilter {
+  Rate: 2500
+  Allow: false
+}
+HomogeneousFilter {
+  Rate: 5000
+  Allow: false
+}
+LithologyInitialiseStyle: FromModel
+DensityInitialiseStyle: FromLawMean
+SusceptibilityInitialiseStyle: FromLawMean
+RemanentMagnetizationInitialiseStyle: FromLawMean
+AllowNeighbourPropertyDifferentCheck: false
+AllowGeophysicalTests: false
+AllowGeologicalTests: true
+PreserveTopology: false
+SetDualTemperatureMode: false
+LargeMisfitTemperature: 1
+LargeMisfitRMSThresholdFactor: 1
+Mode1TemperatureFactor: 1
+Mode1Duration: 100
+Mode2TemperatureFactor: 1000000
+Mode2Duration: 99900
+ProbabilityOfPropertyChangeOnly: 0
+PreserveVerticalRelationshipTest: true
+PropertyChangeOnFixedCell: false
+Seed: 1234
+NumberOfIterations: 400000
+include_border_effect: true
+method: Spatial
+}
+Run_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Comm3"
+run: "Run1"
+Number_CPUs: 4
+}
+
+[02/09/2015 17:38:33.942000] Processing job file: "006_Case1_PVR_Shape1_Run1_inversion.task"
+
+NewCase_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Shape1"
+x_cell_size: 500
+y_cell_size: 500
+z_cell_size: 225
+east_minimum_voxet: 0
+east_maximum_voxet: 10000
+north_minimum_voxet: 0
+north_maximum_voxet: 10000
+elevation_minimum_voxet: -2000
+elevation_maximum_voxet: 2500
+VariableZResolution {
+  use_variable_z_resolution: false
+  topo_part_boundary_at: 2500
+  lower_z_cell_size: 225
+  geometric_factor: 1
+}
+ObservedGridList {
+  ObservedGrid {
+    grid: "../Data/Observed_Boug_Grav_2p2.ers"
+    type: Gravimetry
+    compute_surface_style: OnTopographyWithClearance
+    mean_elevation: 0
+    compute_surface_z_sampling: 225
+    Interpolate: false
+    precision: 0.1
+    Match_Trend: false
+    Match_Trend_Degree: 0
+    Match_Trend_Rate: 0
+    Output_Trends: false
+  }
+}
+}
+CaseControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Shape1"
+SetReferenceDensity: 2.2
+SetAboveTopoDensity: 2.2
+SetReferenceMagneticField {
+  Magnitude: 56600
+  Inclination: -62
+  Declination: 7.6
+}
+SetLaw {
+  LithologyProperty {
+    lithology: "Cover"
+    property: Movable
+    fixed: false
+    index_voxet_key: 3
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Movable
+    fixed: false
+    index_voxet_key: 2
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Movable
+    fixed: false
+    index_voxet_key: 1
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.2
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.5
+      stddev: 0.1
+      percentage: 70
+    }
+    ProbabilityDistributionFunction2 {
+      type: Normal
+      mean: 3.1
+      stddev: 0.1
+      percentage: 30
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 2.9
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    preserve {
+      node: false
+      node: true
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    preserve {
+      node: false
+      node: false
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    preserve {
+      node: false
+      node: false
+      node: false
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+}
+}
+NewRun_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Shape1"
+run: "Run1"
+NumberOfIterations: 400000
+}
+RunControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Shape1"
+run: "Run1"
+ShapeRatioTest {
+  SetWeights: none
+  IncludeAboveTopoFaces: true
+  IncludeOutsideFaces: true
+  Allow: true
+}
+VolumeRatioTest {
+  SetWeights: none
+  Allow: false
+}
+CommonalityTest {
+  SetWeights: none
+  Allow: false
+}
+CommonalityVolumeTest {
+  SetWeights: none
+  Allow: false
+}
+DilationOrErosionFilter {
+  Rate: 2500
+  Allow: false
+}
+HomogeneousFilter {
+  Rate: 5000
+  Allow: false
+}
+LithologyInitialiseStyle: FromModel
+DensityInitialiseStyle: FromLawMean
+SusceptibilityInitialiseStyle: FromLawMean
+RemanentMagnetizationInitialiseStyle: FromLawMean
+AllowNeighbourPropertyDifferentCheck: false
+AllowGeophysicalTests: false
+AllowGeologicalTests: true
+PreserveTopology: false
+SetDualTemperatureMode: false
+LargeMisfitTemperature: 1
+LargeMisfitRMSThresholdFactor: 1
+Mode1TemperatureFactor: 1
+Mode1Duration: 100
+Mode2TemperatureFactor: 1000000
+Mode2Duration: 99900
+ProbabilityOfPropertyChangeOnly: 0
+PreserveVerticalRelationshipTest: true
+PropertyChangeOnFixedCell: false
+Seed: 1234
+NumberOfIterations: 400000
+include_border_effect: true
+method: Spatial
+}
+Run_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Shape1"
+run: "Run1"
+Number_CPUs: 4
+}
+
+[02/09/2015 17:39: 5.535000] Processing job file: "007_Case1_PVR_Shape2_Run1_inversion.task"
+
+NewCase_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Shape2"
+x_cell_size: 500
+y_cell_size: 500
+z_cell_size: 225
+east_minimum_voxet: 0
+east_maximum_voxet: 10000
+north_minimum_voxet: 0
+north_maximum_voxet: 10000
+elevation_minimum_voxet: -2000
+elevation_maximum_voxet: 2500
+VariableZResolution {
+  use_variable_z_resolution: false
+  topo_part_boundary_at: 2500
+  lower_z_cell_size: 225
+  geometric_factor: 1
+}
+ObservedGridList {
+  ObservedGrid {
+    grid: "../Data/Observed_Boug_Grav_2p2.ers"
+    type: Gravimetry
+    compute_surface_style: OnTopographyWithClearance
+    mean_elevation: 0
+    compute_surface_z_sampling: 225
+    Interpolate: false
+    precision: 0.1
+    Match_Trend: false
+    Match_Trend_Degree: 0
+    Match_Trend_Rate: 0
+    Output_Trends: false
+  }
+}
+}
+CaseControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Shape2"
+SetReferenceDensity: 2.2
+SetAboveTopoDensity: 2.2
+SetReferenceMagneticField {
+  Magnitude: 56600
+  Inclination: -62
+  Declination: 7.6
+}
+SetLaw {
+  LithologyProperty {
+    lithology: "Cover"
+    property: Movable
+    fixed: false
+    index_voxet_key: 3
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Movable
+    fixed: false
+    index_voxet_key: 2
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Movable
+    fixed: false
+    index_voxet_key: 1
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.2
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.5
+      stddev: 0.1
+      percentage: 70
+    }
+    ProbabilityDistributionFunction2 {
+      type: Normal
+      mean: 3.1
+      stddev: 0.1
+      percentage: 30
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 2.9
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    preserve {
+      node: false
+      node: true
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    preserve {
+      node: false
+      node: false
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    preserve {
+      node: false
+      node: false
+      node: false
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+}
+}
+NewRun_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Shape2"
+run: "Run1"
+NumberOfIterations: 400000
+}
+RunControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Shape2"
+run: "Run1"
+ShapeRatioTest {
+  SetWeights: none
+  IncludeAboveTopoFaces: true
+  IncludeOutsideFaces: true
+  Allow: true
+}
+VolumeRatioTest {
+  SetWeights: none
+  Allow: false
+}
+CommonalityTest {
+  SetWeights: none
+  Allow: false
+}
+CommonalityVolumeTest {
+  SetWeights: none
+  Allow: false
+}
+DilationOrErosionFilter {
+  Rate: 2500
+  Allow: false
+}
+HomogeneousFilter {
+  Rate: 5000
+  Allow: false
+}
+LithologyInitialiseStyle: FromModel
+DensityInitialiseStyle: FromLawMean
+SusceptibilityInitialiseStyle: FromLawMean
+RemanentMagnetizationInitialiseStyle: FromLawMean
+AllowNeighbourPropertyDifferentCheck: false
+AllowGeophysicalTests: false
+AllowGeologicalTests: true
+PreserveTopology: false
+SetDualTemperatureMode: false
+LargeMisfitTemperature: 1
+LargeMisfitRMSThresholdFactor: 1
+Mode1TemperatureFactor: 1
+Mode1Duration: 100
+Mode2TemperatureFactor: 1000000
+Mode2Duration: 99900
+ProbabilityOfPropertyChangeOnly: 0
+PreserveVerticalRelationshipTest: true
+PropertyChangeOnFixedCell: false
+Seed: 1234
+NumberOfIterations: 400000
+include_border_effect: true
+method: Spatial
+}
+Run_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Shape2"
+run: "Run1"
+Number_CPUs: 4
+}
+
+[02/09/2015 17:39:34.797000] Processing job file: "008_Case1_PVR_Shape3_Run1_inversion.task"
+
+NewCase_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Shape3"
+x_cell_size: 500
+y_cell_size: 500
+z_cell_size: 225
+east_minimum_voxet: 0
+east_maximum_voxet: 10000
+north_minimum_voxet: 0
+north_maximum_voxet: 10000
+elevation_minimum_voxet: -2000
+elevation_maximum_voxet: 2500
+VariableZResolution {
+  use_variable_z_resolution: false
+  topo_part_boundary_at: 2500
+  lower_z_cell_size: 225
+  geometric_factor: 1
+}
+ObservedGridList {
+  ObservedGrid {
+    grid: "../Data/Observed_Boug_Grav_2p2.ers"
+    type: Gravimetry
+    compute_surface_style: OnTopographyWithClearance
+    mean_elevation: 0
+    compute_surface_z_sampling: 225
+    Interpolate: false
+    precision: 0.1
+    Match_Trend: false
+    Match_Trend_Degree: 0
+    Match_Trend_Rate: 0
+    Output_Trends: false
+  }
+}
+}
+CaseControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Shape3"
+SetReferenceDensity: 2.2
+SetAboveTopoDensity: 2.2
+SetReferenceMagneticField {
+  Magnitude: 56600
+  Inclination: -62
+  Declination: 7.6
+}
+SetLaw {
+  LithologyProperty {
+    lithology: "Cover"
+    property: Movable
+    fixed: false
+    index_voxet_key: 3
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Movable
+    fixed: false
+    index_voxet_key: 2
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Movable
+    fixed: false
+    index_voxet_key: 1
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.2
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.5
+      stddev: 0.1
+      percentage: 70
+    }
+    ProbabilityDistributionFunction2 {
+      type: Normal
+      mean: 3.1
+      stddev: 0.1
+      percentage: 30
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 2.9
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    preserve {
+      node: false
+      node: true
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    preserve {
+      node: false
+      node: false
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    preserve {
+      node: false
+      node: false
+      node: false
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.05
+    }
+  }
+}
+}
+NewRun_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Shape3"
+run: "Run1"
+NumberOfIterations: 400000
+}
+RunControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Shape3"
+run: "Run1"
+ShapeRatioTest {
+  SetWeights: none
+  IncludeAboveTopoFaces: true
+  IncludeOutsideFaces: true
+  Allow: true
+}
+VolumeRatioTest {
+  SetWeights: none
+  Allow: false
+}
+CommonalityTest {
+  SetWeights: none
+  Allow: false
+}
+CommonalityVolumeTest {
+  SetWeights: none
+  Allow: false
+}
+DilationOrErosionFilter {
+  Rate: 2500
+  Allow: false
+}
+HomogeneousFilter {
+  Rate: 5000
+  Allow: false
+}
+LithologyInitialiseStyle: FromModel
+DensityInitialiseStyle: FromLawMean
+SusceptibilityInitialiseStyle: FromLawMean
+RemanentMagnetizationInitialiseStyle: FromLawMean
+AllowNeighbourPropertyDifferentCheck: false
+AllowGeophysicalTests: false
+AllowGeologicalTests: true
+PreserveTopology: false
+SetDualTemperatureMode: false
+LargeMisfitTemperature: 1
+LargeMisfitRMSThresholdFactor: 1
+Mode1TemperatureFactor: 1
+Mode1Duration: 100
+Mode2TemperatureFactor: 1000000
+Mode2Duration: 99900
+ProbabilityOfPropertyChangeOnly: 0
+PreserveVerticalRelationshipTest: true
+PropertyChangeOnFixedCell: false
+Seed: 1234
+NumberOfIterations: 400000
+include_border_effect: true
+method: Spatial
+}
+Run_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Shape3"
+run: "Run1"
+Number_CPUs: 4
+}
+
+[02/09/2015 17:40: 4.482000] Processing job file: "009_Case1_PVR_Vol0p7_Run1_inversion.task"
+
+NewCase_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Vol0p7"
+x_cell_size: 500
+y_cell_size: 500
+z_cell_size: 225
+east_minimum_voxet: 0
+east_maximum_voxet: 10000
+north_minimum_voxet: 0
+north_maximum_voxet: 10000
+elevation_minimum_voxet: -2000
+elevation_maximum_voxet: 2500
+VariableZResolution {
+  use_variable_z_resolution: false
+  topo_part_boundary_at: 2500
+  lower_z_cell_size: 225
+  geometric_factor: 1
+}
+ObservedGridList {
+  ObservedGrid {
+    grid: "../Data/Observed_Boug_Grav_2p2.ers"
+    type: Gravimetry
+    compute_surface_style: OnTopographyWithClearance
+    mean_elevation: 0
+    compute_surface_z_sampling: 225
+    Interpolate: false
+    precision: 0.1
+    Match_Trend: false
+    Match_Trend_Degree: 0
+    Match_Trend_Rate: 0
+    Output_Trends: false
+  }
+}
+}
+CaseControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Vol0p7"
+SetReferenceDensity: 2.2
+SetAboveTopoDensity: 2.2
+SetReferenceMagneticField {
+  Magnitude: 56600
+  Inclination: -62
+  Declination: 7.6
+}
+SetLaw {
+  LithologyProperty {
+    lithology: "Cover"
+    property: Movable
+    fixed: false
+    index_voxet_key: 3
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Movable
+    fixed: false
+    index_voxet_key: 2
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Movable
+    fixed: false
+    index_voxet_key: 1
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.2
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.5
+      stddev: 0.1
+      percentage: 70
+    }
+    ProbabilityDistributionFunction2 {
+      type: Normal
+      mean: 3.1
+      stddev: 0.1
+      percentage: 30
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 2.9
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    preserve {
+      node: false
+      node: true
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    preserve {
+      node: false
+      node: false
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    preserve {
+      node: false
+      node: false
+      node: false
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.03
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.03
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 0.7
+      stddev: 0.01
+    }
+  }
+}
+}
+NewRun_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Vol0p7"
+run: "Run1"
+NumberOfIterations: 400000
+}
+RunControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Vol0p7"
+run: "Run1"
+ShapeRatioTest {
+  SetWeights: none
+  IncludeAboveTopoFaces: false
+  IncludeOutsideFaces: false
+  Allow: false
+}
+VolumeRatioTest {
+  SetWeights: none
+  Allow: true
+}
+CommonalityTest {
+  SetWeights: none
+  Allow: false
+}
+CommonalityVolumeTest {
+  SetWeights: none
+  Allow: false
+}
+DilationOrErosionFilter {
+  Rate: 2500
+  Allow: false
+}
+HomogeneousFilter {
+  Rate: 5000
+  Allow: false
+}
+LithologyInitialiseStyle: FromModel
+DensityInitialiseStyle: FromLawMean
+SusceptibilityInitialiseStyle: FromLawMean
+RemanentMagnetizationInitialiseStyle: FromLawMean
+AllowNeighbourPropertyDifferentCheck: false
+AllowGeophysicalTests: false
+AllowGeologicalTests: true
+PreserveTopology: false
+SetDualTemperatureMode: false
+LargeMisfitTemperature: 1
+LargeMisfitRMSThresholdFactor: 1
+Mode1TemperatureFactor: 1
+Mode1Duration: 100
+Mode2TemperatureFactor: 1000000
+Mode2Duration: 99900
+ProbabilityOfPropertyChangeOnly: 0
+PreserveVerticalRelationshipTest: true
+PropertyChangeOnFixedCell: false
+Seed: 1234
+NumberOfIterations: 400000
+include_border_effect: true
+method: Spatial
+}
+Run_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Vol0p7"
+run: "Run1"
+Number_CPUs: 4
+}
+
+[02/09/2015 17:40:31.301000] Processing job file: "010_Case1_PVR_Vol1p0_Run1_inversion.task"
+
+NewCase_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Vol1p0"
+x_cell_size: 500
+y_cell_size: 500
+z_cell_size: 225
+east_minimum_voxet: 0
+east_maximum_voxet: 10000
+north_minimum_voxet: 0
+north_maximum_voxet: 10000
+elevation_minimum_voxet: -2000
+elevation_maximum_voxet: 2500
+VariableZResolution {
+  use_variable_z_resolution: false
+  topo_part_boundary_at: 2500
+  lower_z_cell_size: 225
+  geometric_factor: 1
+}
+ObservedGridList {
+  ObservedGrid {
+    grid: "../Data/Observed_Boug_Grav_2p2.ers"
+    type: Gravimetry
+    compute_surface_style: OnTopographyWithClearance
+    mean_elevation: 0
+    compute_surface_z_sampling: 225
+    Interpolate: false
+    precision: 0.1
+    Match_Trend: false
+    Match_Trend_Degree: 0
+    Match_Trend_Rate: 0
+    Output_Trends: false
+  }
+}
+}
+CaseControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Vol1p0"
+SetReferenceDensity: 2.2
+SetAboveTopoDensity: 2.2
+SetReferenceMagneticField {
+  Magnitude: 56600
+  Inclination: -62
+  Declination: 7.6
+}
+SetLaw {
+  LithologyProperty {
+    lithology: "Cover"
+    property: Movable
+    fixed: false
+    index_voxet_key: 3
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Movable
+    fixed: false
+    index_voxet_key: 2
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Movable
+    fixed: false
+    index_voxet_key: 1
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.2
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.5
+      stddev: 0.1
+      percentage: 70
+    }
+    ProbabilityDistributionFunction2 {
+      type: Normal
+      mean: 3.1
+      stddev: 0.1
+      percentage: 30
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 2.9
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    preserve {
+      node: false
+      node: true
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    preserve {
+      node: false
+      node: false
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    preserve {
+      node: false
+      node: false
+      node: false
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+}
+}
+NewRun_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Vol1p0"
+run: "Run1"
+NumberOfIterations: 400000
+}
+RunControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Vol1p0"
+run: "Run1"
+ShapeRatioTest {
+  SetWeights: none
+  IncludeAboveTopoFaces: false
+  IncludeOutsideFaces: false
+  Allow: false
+}
+VolumeRatioTest {
+  SetWeights: none
+  Allow: true
+}
+CommonalityTest {
+  SetWeights: none
+  Allow: false
+}
+CommonalityVolumeTest {
+  SetWeights: none
+  Allow: false
+}
+DilationOrErosionFilter {
+  Rate: 2500
+  Allow: false
+}
+HomogeneousFilter {
+  Rate: 5000
+  Allow: false
+}
+LithologyInitialiseStyle: FromModel
+DensityInitialiseStyle: FromLawMean
+SusceptibilityInitialiseStyle: FromLawMean
+RemanentMagnetizationInitialiseStyle: FromLawMean
+AllowNeighbourPropertyDifferentCheck: false
+AllowGeophysicalTests: false
+AllowGeologicalTests: true
+PreserveTopology: false
+SetDualTemperatureMode: false
+LargeMisfitTemperature: 1
+LargeMisfitRMSThresholdFactor: 1
+Mode1TemperatureFactor: 1
+Mode1Duration: 100
+Mode2TemperatureFactor: 1000000
+Mode2Duration: 99900
+ProbabilityOfPropertyChangeOnly: 0
+PreserveVerticalRelationshipTest: true
+PropertyChangeOnFixedCell: false
+Seed: 1234
+NumberOfIterations: 400000
+include_border_effect: true
+method: Spatial
+}
+Run_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Vol1p0"
+run: "Run1"
+Number_CPUs: 4
+}
+
+[02/09/2015 17:40:55.322000] Processing job file: "011_Case1_PVR_Vol1p3_Run1_inversion.task"
+
+NewCase_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Vol1p3"
+x_cell_size: 500
+y_cell_size: 500
+z_cell_size: 225
+east_minimum_voxet: 0
+east_maximum_voxet: 10000
+north_minimum_voxet: 0
+north_maximum_voxet: 10000
+elevation_minimum_voxet: -2000
+elevation_maximum_voxet: 2500
+VariableZResolution {
+  use_variable_z_resolution: false
+  topo_part_boundary_at: 2500
+  lower_z_cell_size: 225
+  geometric_factor: 1
+}
+ObservedGridList {
+  ObservedGrid {
+    grid: "../Data/Observed_Boug_Grav_2p2.ers"
+    type: Gravimetry
+    compute_surface_style: OnTopographyWithClearance
+    mean_elevation: 0
+    compute_surface_z_sampling: 225
+    Interpolate: false
+    precision: 0.1
+    Match_Trend: false
+    Match_Trend_Degree: 0
+    Match_Trend_Rate: 0
+    Output_Trends: false
+  }
+}
+}
+CaseControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Vol1p3"
+SetReferenceDensity: 2.2
+SetAboveTopoDensity: 2.2
+SetReferenceMagneticField {
+  Magnitude: 56600
+  Inclination: -62
+  Declination: 7.6
+}
+SetLaw {
+  LithologyProperty {
+    lithology: "Cover"
+    property: Movable
+    fixed: false
+    index_voxet_key: 3
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Movable
+    fixed: false
+    index_voxet_key: 2
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Movable
+    fixed: false
+    index_voxet_key: 1
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.2
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 2.5
+      stddev: 0.1
+      percentage: 70
+    }
+    ProbabilityDistributionFunction2 {
+      type: Normal
+      mean: 3.1
+      stddev: 0.1
+      percentage: 30
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Density
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 2.9
+      stddev: 0.1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    preserve {
+      node: false
+      node: true
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    preserve {
+      node: false
+      node: false
+      node: true
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    preserve {
+      node: false
+      node: false
+      node: false
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: CommonalityVolume
+    ProbabilityDistributionFunction {
+      type: Normal
+      mean: 0
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: Commonality
+    ProbabilityDistributionFunction {
+      type: Weibull
+      mean: 0.2
+      stddev: 1
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: ShapeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.01
+    }
+  }
+  LithologyProperty {
+    lithology: "Cover"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.03
+    }
+  }
+  LithologyProperty {
+    lithology: "Host_rock"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1
+      stddev: 0.03
+    }
+  }
+  LithologyProperty {
+    lithology: "Granite"
+    property: VolumeRatio
+    ProbabilityDistributionFunction {
+      type: LogNormal
+      mean: 1.3
+      stddev: 0.01
+    }
+  }
+}
+}
+NewRun_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Vol1p3"
+run: "Run1"
+NumberOfIterations: 400000
+}
+RunControl_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Vol1p3"
+run: "Run1"
+ShapeRatioTest {
+  SetWeights: none
+  IncludeAboveTopoFaces: false
+  IncludeOutsideFaces: false
+  Allow: false
+}
+VolumeRatioTest {
+  SetWeights: none
+  Allow: true
+}
+CommonalityTest {
+  SetWeights: none
+  Allow: false
+}
+CommonalityVolumeTest {
+  SetWeights: none
+  Allow: false
+}
+DilationOrErosionFilter {
+  Rate: 2500
+  Allow: false
+}
+HomogeneousFilter {
+  Rate: 5000
+  Allow: false
+}
+LithologyInitialiseStyle: FromModel
+DensityInitialiseStyle: FromLawMean
+SusceptibilityInitialiseStyle: FromLawMean
+RemanentMagnetizationInitialiseStyle: FromLawMean
+AllowNeighbourPropertyDifferentCheck: false
+AllowGeophysicalTests: false
+AllowGeologicalTests: true
+PreserveTopology: false
+SetDualTemperatureMode: false
+LargeMisfitTemperature: 1
+LargeMisfitRMSThresholdFactor: 1
+Mode1TemperatureFactor: 1
+Mode1Duration: 100
+Mode2TemperatureFactor: 1000000
+Mode2Duration: 99900
+ProbabilityOfPropertyChangeOnly: 0
+PreserveVerticalRelationshipTest: true
+PropertyChangeOnFixedCell: false
+Seed: 1234
+NumberOfIterations: 400000
+include_border_effect: true
+method: Spatial
+}
+Run_GMT {
+filename: "C4Beginning_Project.xml"
+case: "Case1_PVR_Vol1p3"
+run: "Run1"
+Number_CPUs: 4
+}
+
+[02/09/2015 18:37:52.022000] Processing job file: "Calc_SupSumStats_Tasks01to11.task"
+
+
+[02/09/2015 18:38:17.950000] Processing job file: "Calc_SupSumStats_Tasks01to11.task"
+
+
+[02/09/2015 18:39:26.842000] Processing job file: "Calc_SupSumStats_Tasks01to11.task"
+
+
+[02/09/2015 18:41: 4.388000] Processing job file: "Calc_SupSumStats_Tasks01to11.task"
+
+
+[02/09/2015 18:44: 7.432000] Processing job file: "Calc_SupSumStats_Tasks01to11.task"
+
+
+[02/09/2015 18:51:39.250000] Processing job file: "Calc_SupSumStats_Tasks01to11.task"
+
+
+[02/09/2015 18:57: 5.559000] Processing job file: "Calc_SupSumStats_Tasks01to11.task"
+
+
+[02/09/2015 19: 0:25.677000] Processing job file: "Calc_SupSumStats_Tasks01to11.task"
+
+
+[02/09/2015 19: 1:50.581000] Processing job file: "Calc_SupSumStats_Tasks01to11.task"
+
+
+[02/09/2015 19:10:29.046000] Processing job file: "Calc_SupSumStats_Tasks01to11.task"
+
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_NoTests"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Comm1"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Comm2"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Comm3"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Shape1"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Shape2"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Shape3"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Vol0p7"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Vol1p0"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Vol1p3"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+threshold_percentage: 90
+}
+
+[02/09/2015 19:17:19.326000] Processing job file: "Calc_SupSumStats_and_Name_Tasks01.task"
+
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_NoTests"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "NoTests_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+
+[02/09/2015 19:23:31.183000] Processing job file: "Calc_SupSumStats_Tasks01to11.task"
+
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_NoTests"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "NoTests_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "PVR_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Comm1"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "PVR_Comm1_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Comm2"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "PVR_Comm2_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Comm3"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "PVR_Comm3_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Shape1"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "PVR_Shape1_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Shape2"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "PVR_Shape2_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Shape3"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "PVR_Shape3_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Vol0p7"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "PVR_Vol0p7_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Vol1p0"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "PVR_Vol1p0_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Vol1p3"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "PVR_Vol1p3_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+
+[02/09/2015 19:51:15.246000] Processing job file: "Calc_SupSumStats_Tasks01to11.task"
+
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_NoTests"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "Case1_NoTests/Run1/NoTests_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "Case1_PVR/Run1/PVR_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Comm1"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "Case1_PVR_Comm1/Run1/PVR_Comm1_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Comm2"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "Case1_PVR_Comm2/Run1/PVR_Comm2_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Comm3"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "Case1_PVR_Comm3/Run1/PVR_Comm3_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Shape1"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "Case1_PVR_Shape1/Run1/PVR_Shape1_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Shape2"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "Case1_PVR_Shape2/Run1/PVR_Shape2_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Shape3"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "Case1_PVR_Shape3/Run1/PVR_Shape3_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Vol0p7"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "Case1_PVR_Vol0p7/Run1/PVR_Vol0p7_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Vol1p0"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "Case1_PVR_Vol1p0/Run1/PVR_Vol1p0_Stats_1_400K_T90"
+threshold_percentage: 90
+}
+MakeSuperSummaryStats_GMT {
+filename: "C4Completed_Project.xml"
+case: "Case1_PVR_Vol1p3"
+RunInterval {
+  run: "Run1"
+  start_iterations: 0
+  end_iterations: 400000
+}
+statistical_voxet: "Case1_PVR_Vol1p3/Run1/PVR_Vol1p3_Stats_1_400K_T90"
+threshold_percentage: 90
+}

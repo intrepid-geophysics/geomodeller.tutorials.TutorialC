@@ -1,0 +1,1 @@
+# GeoModeller Tutorial C (Forward & Inverse Modelling of Potential Fields)

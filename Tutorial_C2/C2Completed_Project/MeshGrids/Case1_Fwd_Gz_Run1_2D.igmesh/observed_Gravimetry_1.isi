@@ -1,0 +1,15 @@
+MetaData Begin
+	Name	= observed_Gravimetry_1.ers
+	Version	= "Intrepid GeoModeller v6.0.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build bc37091a4661+ "
+	observed_Gravimetry_1 Begin
+		GroupBy	= no
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Primitive	= quad
+		Alias	= observed_Gravimetry_1
+		Bands	= 1
+		Projection	= "Local"
+		Datum	= "WGS84"
+		Units	= "RAW"
+	observed_Gravimetry_1 End
+MetaData End

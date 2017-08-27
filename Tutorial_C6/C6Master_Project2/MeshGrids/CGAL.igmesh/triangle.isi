@@ -1,0 +1,34 @@
+MetaData Begin
+	Name	= triangle..DIR
+	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build d6f2b624fe14+ "
+	TetrahedraNo Begin
+		GroupBy	= no
+		DataType	= Signed32BitInteger
+		ByteOrder	= LSBFirst
+		Bands	= 1
+	TetrahedraNo End
+	TetrahedraRank Begin
+		GroupBy	= no
+		DataType	= Signed32BitInteger
+		ByteOrder	= LSBFirst
+		Bands	= 1
+	TetrahedraRank End
+	_i1_ Begin
+		GroupBy	= no
+		DataType	= Signed32BitInteger
+		ByteOrder	= LSBFirst
+		Bands	= 1
+	_i1_ End
+	_i2_ Begin
+		GroupBy	= no
+		DataType	= Signed32BitInteger
+		ByteOrder	= LSBFirst
+		Bands	= 1
+	_i2_ End
+	_i3_ Begin
+		GroupBy	= no
+		DataType	= Signed32BitInteger
+		ByteOrder	= LSBFirst
+		Bands	= 1
+	_i3_ End
+MetaData End

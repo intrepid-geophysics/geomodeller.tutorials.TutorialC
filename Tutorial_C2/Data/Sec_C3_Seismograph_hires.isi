@@ -1,0 +1,47 @@
+MetaData Begin
+	Name	= Sec_C3_Seismograph_hires.sgy
+	Version	= "Intrepid GeoModeller v6.0.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build bc37091a4661+ "
+	Line Begin
+		DataType	= Signed32BitInteger
+		ByteOrder	= LSBFirst
+	Line End
+	Channel Begin
+		DataType	= Signed32BitInteger
+		ByteOrder	= LSBFirst
+	Channel End
+	CDP Begin
+		DataType	= Signed32BitInteger
+		ByteOrder	= LSBFirst
+	CDP End
+	ShotPoint Begin
+		DataType	= Signed32BitInteger
+		ByteOrder	= LSBFirst
+	ShotPoint End
+	X Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Alias	= X
+		Projection	= "NUTM11"
+		Datum	= "WGS84"
+	X End
+	Y Begin
+		DataType	= IEEE8ByteReal
+		ByteOrder	= LSBFirst
+		Alias	= Y
+		Projection	= "NUTM11"
+		Datum	= "WGS84"
+	Y End
+	water_depth Begin
+		DataType	= IEEE4ByteReal
+		ByteOrder	= LSBFirst
+	water_depth End
+	decimal_year Begin
+		DataType	= IEEE4ByteReal
+		ByteOrder	= LSBFirst
+	decimal_year End
+	Signal Begin
+		DataType	= IEEE4ByteReal
+		ByteOrder	= LSBFirst
+		Bands	= 3000
+	Signal End
+MetaData End

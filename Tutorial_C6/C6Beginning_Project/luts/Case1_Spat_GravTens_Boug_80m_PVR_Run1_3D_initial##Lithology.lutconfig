@@ -1,0 +1,51 @@
+<com.geomodeller.ui.dialogs.LutConfigurator id="1">
+  <data id="2">
+    <data id="3">
+      <lut>D:\NewTutorial_2014\Tutorial_C\Tutorial_C6\C6Beginning_Project\luts\Case1_Spat_GravTens_Boug_80m_PVR_Run1_3D_initial##Lithology.lutconfig\Case1_Spat_GravTens_Boug_80m_PVR_Run1_3D_initial##Lithology</lut>
+      <file>D:\NewTutorial_2014\Tutorial_C\Tutorial_C6\C6Beginning_Project\luts\Case1_Spat_GravTens_Boug_80m_PVR_Run1_3D_initial##Lithology.lutconfig\Case1_Spat_GravTens_Boug_80m_PVR_Run1_3D_initial##Lithology</file>
+      <builder class="com.geomodeller.ui.dialogs.ModelPileBuilder" id="4">
+        <points id="5">
+          <com.dfa.apps.gravitas.plugin.visual3d.lut.VC id="6">
+            <v>0.0</v>
+            <cix>0</cix>
+            <user>true</user>
+            <current>false</current>
+          </com.dfa.apps.gravitas.plugin.visual3d.lut.VC>
+          <com.dfa.apps.gravitas.plugin.visual3d.lut.VC id="7">
+            <v>1.0</v>
+            <cix>1</cix>
+            <user>true</user>
+            <current>false</current>
+          </com.dfa.apps.gravitas.plugin.visual3d.lut.VC>
+          <com.dfa.apps.gravitas.plugin.visual3d.lut.VC id="8">
+            <v>2.0</v>
+            <cix>2</cix>
+            <user>true</user>
+            <current>false</current>
+          </com.dfa.apps.gravitas.plugin.visual3d.lut.VC>
+          <com.dfa.apps.gravitas.plugin.visual3d.lut.VC id="9">
+            <v>3.0</v>
+            <cix>3</cix>
+            <user>true</user>
+            <current>false</current>
+          </com.dfa.apps.gravitas.plugin.visual3d.lut.VC>
+        </points>
+        <selected>0</selected>
+        <myname>Case1_Spat_GravTens_Boug_80m_PVR_Run1_3D_initial##Lithology</myname>
+      </builder>
+      <available class="linked-hash-set" id="10">
+        <com.geomodeller.ui.dialogs.ModelPileBuilder reference="4"/>
+      </available>
+      <dataclip id="11">
+        <min>0.0</min>
+        <max>3.0</max>
+        <undefined>false</undefined>
+      </dataclip>
+      <visualclip id="12">
+        <min>0.0</min>
+        <max>3.0</max>
+        <undefined>false</undefined>
+      </visualclip>
+    </data>
+  </data>
+</com.geomodeller.ui.dialogs.LutConfigurator>

@@ -1,0 +1,24 @@
+	Summary of Case1_Spat_GravTens_Boug_80m_PVR_cloned1/Run1 (16.65 minutes)
+
+	Total Iterations                               672000
+
+	Total Proposals                                672000 (2421619 / hour)
+		InterFormation (Formation Changed  )   335764 (Proposal to change boundary resulted in formation change)
+		InterFormation (Formation Unchanged)        0 (Proposal to change boundary left formation unchanged)
+		IntraFormation                         336236 (Proposal to change petrophysical properties only)
+
+	TotalAcceptanceCount                           137250 (494594 / hour)
+		InterFormation (Formation Changed  )     2819 of   335764
+		InterFormation (Formation Unchanged)        0 of        0
+		IntraFormation                         134431 of   336236
+
+	TotalRejectCount                               534750
+	    GeologyRejects                             244490
+		PreserveTopology                            0 of        0
+		PreserveVerticalRelationship           185054 of   335764
+		Commonality                                 0 of        0
+		CommonalityVolume                           0 of        0
+		Volume                                      0 of        0
+		Shape                                   59436 of   150710
+	    GeophysicsRejects                          290260
+		GeophysicalRejects[1]=                 290260 of  1483108
