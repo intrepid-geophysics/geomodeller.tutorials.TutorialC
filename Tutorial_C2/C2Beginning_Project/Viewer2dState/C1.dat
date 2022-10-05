@@ -1,9 +1,9 @@
 <viewers.v2d.Viewer2dState id="1">
   <__data class="string" defined-in="com.geomodeller.model.persistence.Storable$AStorable">C1</__data>
   <__background id="2">
-    <red>0</red>
-    <green>0</green>
-    <blue>0</blue>
+    <red>160</red>
+    <green>160</green>
+    <blue>160</blue>
     <alpha>255</alpha>
   </__background>
   <__verticalExaggeration>1.0</__verticalExaggeration>
@@ -49,13 +49,18 @@
     <__displayTickLabels>false</__displayTickLabels>
     <__displayAxisLabels>false</__displayAxisLabels>
     <__displayDecimals>0</__displayDecimals>
+    <__tickLabelRotationU>0.0</__tickLabelRotationU>
+    <__tickLabelRotationV>0.0</__tickLabelRotationV>
+    <__showU>false</__showU>
+    <__showEasting>false</__showEasting>
+    <__showNorthing>false</__showNorthing>
     <__titleFontOptions id="9">
       <__fontName>Arial</__fontName>
       <__textSize>12.0</__textSize>
       <__textColour id="10">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>0</red>
+        <green>0</green>
+        <blue>0</blue>
         <alpha>255</alpha>
       </__textColour>
     </__titleFontOptions>
@@ -71,17 +76,19 @@
     <__Urange id="13">
       <min>0.0</min>
       <max>8978.447096846234</max>
-      <undefined>false</undefined>
+      <__undefined>false</__undefined>
     </__Urange>
     <__Vrange id="14">
       <min>-2000.0004353810957</min>
       <max>2499.9995646189045</max>
-      <undefined>false</undefined>
+      <__undefined>false</__undefined>
     </__Vrange>
     <__doLines>true</__doLines>
     <__doFill>false</__doFill>
     <__doTrend>false</__doTrend>
     <__doLimitToTopo>true</__doLimitToTopo>
+    <__doTriangles>false</__doTriangles>
+    <__doUncert>false</__doUncert>
     <__doTrendWithinSeries>true</__doTrendWithinSeries>
     <__nTrajectories>10</__nTrajectories>
     <__deselectedFills class="empty-list"/>
