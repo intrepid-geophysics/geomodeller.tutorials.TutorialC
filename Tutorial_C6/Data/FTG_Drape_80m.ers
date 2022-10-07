@@ -1,13 +1,14 @@
 DatasetHeader Begin
-	LastUpdated	= Sun Sep 13 01:02:48 GMT 2015
+	LastUpdated	= Fri Oct  7 23:23:37 GMT 2022
 	Version	= "5.0"
 	DataSetType	= ERStorage
 	DataType	= Raster
 	HeaderOffset	= 0
 	CoordinateSpace Begin
-		#Projection	= "RAW"
+		Projection	= "NUTM11"
 		CoordinateType	= EN
-		#Datum	= "RAW"
+		Units	= "METERS"
+		Datum	= "WGS84"
 		Rotation	= 0:0:0 
 	CoordinateSpace End
 	ByteOrder	= LSBFirst
@@ -27,39 +28,5 @@ DatasetHeader Begin
 			Eastings	=               0
 			Northings	=           10000
 		RegistrationCoord End
-		RegionInfo Begin
-			Type	= Polygon
-			RegionName	= "All"
-			SubRegion = {
-				0 0
-				0 334
-				334 334
-				334 0
-}
-			Stats Begin
-				NumberOfBands	= 1
-				NumberOfNonNullCells = {
-					111556
-}
-				NumberOfNullCells = {
-					0
-}
-				MinimumValue = {
-					     991.400196
-}
-				MaximumValue = {
-					    2220.528004
-}
-				MeanValue = {
-					    1353.263844
-}
-				MedianValue = {
-					    1353.263844
-}
-				CovarianceMatrix = {
-					   56545.911109
-}
-			Stats End
-		RegionInfo End
 	RasterInfo End
 DatasetHeader End

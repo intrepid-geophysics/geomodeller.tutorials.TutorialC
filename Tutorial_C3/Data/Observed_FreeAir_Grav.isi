@@ -1,12 +1,12 @@
 MetaData Begin
 	Name	= Observed_FreeAir_Grav.ers
-	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build 0ded2729519c+ "
+	Version	= "Intrepid Project Manager Tool v6.3.0 product for Windows (x64) by ORION debug build de34824dbbd "
 	Observed_FreeAir_Grav Begin
 		GroupBy	= no
 		DataType	= IEEE8ByteReal
 		ByteOrder	= LSBFirst
 		Bands	= 1
-		Projection	= "Local"
+		Projection	= "NUTM11"
 		Datum	= "WGS84"
 	Observed_FreeAir_Grav End
 MetaData End

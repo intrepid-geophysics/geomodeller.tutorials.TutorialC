@@ -1,0 +1,18 @@
+IntrepidTask {
+  ProjConv {
+    InputDataset: "C:\\Intrepid\\repos\\geomodeller.tutorials.TutorialC\\Tutorial_C3\\Data\\Observed_FreeAir_Grav.ers"
+    XIN: ""
+    YIN: ""
+    ZIN: ""
+    XOUT: ""
+    YOUT: ""
+    ZOUT: ""
+    OutputDataset: "C:\\Intrepid\\repos\\geomodeller.tutorials.TutorialC\\Tutorial_C3\\Data\\Observed_FreeAir_Grav_NUTM11_WGS84.ers"
+    OutputProjection {
+      map_projection: "NUTM11"
+      spatial_datum: "WGS84"
+    }
+    OutputCellSize: 100.0
+    UpdateSurveyInfo: true
+  }
+}

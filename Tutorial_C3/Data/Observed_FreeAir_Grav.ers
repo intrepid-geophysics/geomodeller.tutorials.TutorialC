@@ -1,12 +1,13 @@
 DatasetHeader Begin
-	LastUpdated	= Tue Sep 15 23:56:35 GMT 2015
+	LastUpdated	= Fri Oct  7 23:20:26 GMT 2022
 	Version	= "5.0"
 	DataSetType	= ERStorage
 	DataType	= Raster
 	HeaderOffset	= 0
 	CoordinateSpace Begin
-		Projection	= "Local"
+		Projection	= "NUTM11"
 		CoordinateType	= EN
+		Units	= "METERS"
 		Datum	= "WGS84"
 		Rotation	= 0:0:0 
 	CoordinateSpace End

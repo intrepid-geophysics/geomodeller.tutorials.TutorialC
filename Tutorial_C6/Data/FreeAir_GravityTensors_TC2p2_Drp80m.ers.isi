@@ -1,0 +1,12 @@
+MetaData Begin
+	Name	= FreeAir_GravityTensors_TC2p2_Drp80m.ers
+	Version	= "Intrepid Project Manager Tool v6.3.0 product for Windows (x64) by ORION debug build de34824dbbd "
+	FreeAir_GravityTensors_TC2p2_Drp80m Begin
+		GroupBy	= no
+		DataType	= Tensor
+		ByteOrder	= LSBFirst
+		Bands	= 1
+		CoordinateSystemType	= "END"
+		Units	= "Eotvos"
+	FreeAir_GravityTensors_TC2p2_Drp80m End
+MetaData End

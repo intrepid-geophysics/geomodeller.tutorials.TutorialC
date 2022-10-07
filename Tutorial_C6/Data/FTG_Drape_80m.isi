@@ -1,18 +1,12 @@
 MetaData Begin
 	Name	= FTG_Drape_80m.ers
-	Version	= "Intrepid GeoModeller v3.3.0 geomodeller_2014 for Windows (x64) by PELAGIAN optimised build d6f2b624fe14+ "
+	Version	= "Intrepid Project Manager Tool v6.3.0 product for Windows (x64) by ORION debug build de34824dbbd "
 	FTG_Drape_80m Begin
 		GroupBy	= no
 		DataType	= IEEE8ByteReal
 		ByteOrder	= LSBFirst
 		Bands	= 1
-		Samples	= 111556
-		Nulls	= 0
-		Minimum	=   991.400196289
-		Maximum	=   2220.52800391
-		Mean	=    1353.2638441
-		Variance	=   56545.9111085
-		Skew	=   1.00833202834
-		Kurtosis	=  0.542659370669
+		Projection	= "NUTM11"
+		Datum	= "WGS84"
 	FTG_Drape_80m End
 MetaData End

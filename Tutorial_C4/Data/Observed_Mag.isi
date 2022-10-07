@@ -1,12 +1,12 @@
 MetaData Begin
 	Name	= Observed_Mag.ers
-	Version	= "Intrepid Project Manager Tool v5.6.0 INTBTA-3098 for Windows (x64) by PELAGIAN optimised build 288c6d276dd3+ "
+	Version	= "Intrepid Project Manager Tool v6.3.0 product for Windows (x64) by ORION debug build de34824dbbd "
 	Observed_Mag Begin
 		GroupBy	= no
 		DataType	= IEEE8ByteReal
 		ByteOrder	= LSBFirst
 		Bands	= 1
-		Projection	= "Local"
+		Projection	= "NUTM11"
 		Datum	= "WGS84"
 	Observed_Mag End
 MetaData End
